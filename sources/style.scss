@@ -1,0 +1,268 @@
+//Загрузка шрифта
+@import url('https://fonts.googleapis.com/css2?family=Homenaje&display=swap&subset=cyrillic-ext');
+//переделать шрифт
+@import 'variables.scss';
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: $fontFamily;
+    font-weight: 400;
+    font-size: 48px;
+    color: $mainWhite;
+}
+
+.body {
+    height: 100%;
+}
+
+.header {
+    background-color: $secondColor;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    border-bottom: 1px solid $mainWhite;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .menu-container {
+            flex: 1 1 auto;       
+            .menu {
+                &__list {
+
+                    display: flex;
+                    justify-content: space-around;
+                    list-style: none;
+                }
+
+                &__link {
+                    text-decoration: none;
+                    font-family: $fontFamily;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 22px;
+                    color: $mainWhite;
+                }
+            }
+        }
+    }
+}
+
+.slider-box {
+    background-color: $mainColor;
+
+    .wrapper {
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        flex-flow: column nowrap;
+
+        .image-slider {
+            flex: 1 1 auto;
+            min-width: 0;
+            margin: 30px;
+            .swiper-wrapper {
+                .swiper-slide {
+                    width: 100%;
+                    height: 100%;
+
+                    .slide-container {
+                        display: flex;
+                        justify-content: center;
+                        img {
+                            max-width: 100%;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .title-box {
+            display: flex;
+            justify-content: center;
+        }
+
+        .button-box {
+            display: flex;
+            justify-content: center;
+
+            .button-box__button {
+                background-color: $mainButtonColor;
+
+                .button-link {
+                    display: block;
+                    padding: 20px 30px;
+                    text-decoration: none;
+                    font-family: $fontFamily;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 22px;
+                    color: $ButtonFontColor;
+                }
+            }
+        }
+    }
+}
+
+.in-cinema {
+    background-color: $secondColor;
+
+    .wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+
+        .card {
+            margin-right: 30px;
+            width: 450px;
+            height: 250px;
+            background-color: $mainColor;
+        }
+    }
+}
+
+.boutique {
+    background: url('../img/бутик_кино.png');
+    background-repeat: no-repeat;
+    //background-attachment:fixed;
+    background-size: cover;
+    height: 548px;
+    .wrapper {
+        display: flex;
+        flex: 1 1 auto;
+        flex-flow: column wrap;
+        padding: 40px;
+
+        .title-box {
+            margin-bottom: 100px;
+        }
+
+        .text-box {
+            margin-bottom: 100px;
+
+            &__text {
+                font-family: $fontFamily;
+                color: $mainWhite;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 22px;
+            }
+        }
+
+        .button-box {
+            display: flex;
+            justify-content: flex-end;
+
+            .button-box__button {
+                background-color: $mainButtonColor;
+
+                .button-link {
+                    display: block;
+                    padding: 20px 30px;
+                    text-decoration: none;
+                    font-family: $fontFamily;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 22px;
+                    color: $ButtonFontColor;
+                }
+            }
+        }
+    }
+}
+
+.threed {
+    background: url('../img/3д_кино.png');
+    background-repeat: no-repeat;
+    //background-attachment:fixed;
+    background-size: cover;
+    height: 548px;
+
+    .wrapper {
+        display: flex;
+        flex: 1 1 auto;
+        flex-flow: column wrap;
+        padding: 40px;
+
+        .title-box {
+            margin-bottom: 100px;
+        }
+
+        .text-box {
+            margin-bottom: 100px;
+
+            &__text {
+                font-family: $fontFamily;
+                color: $mainWhite;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 22px;
+            }
+        }
+
+        .button-box {
+            display: flex;
+            justify-content: flex-end;
+
+            .button-box__button {
+                background-color: $mainButtonColor;
+
+                .button-link {
+                    display: block;
+                    padding: 20px 30px;
+                    text-decoration: none;
+                    font-family: $fontFamily;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 22px;
+                    color: $ButtonFontColor;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $mainColor;
+    padding: 40px;
+
+    .first-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .text-box {
+            display: flex;
+            justify-content: center;
+
+            &__text {
+                flex: 1 1 80%;
+                font-family: $fontFamily;
+                color: $mainWhite;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 22px;
+                padding: 0px 0px 0px 40px;
+            }
+        }
+    }
+}

@@ -1,0 +1,304 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Homenaje&display=swap&subset=cyrillic-ext");
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: "Homenaje";
+  font-weight: 400;
+  font-size: 48px;
+  color: rgb(255, 255, 255);
+}
+
+.body {
+  height: 100%;
+}
+
+.header {
+  background-color: rgba(18, 23, 46, 0.9);
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+.header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header .wrapper .menu-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.header .wrapper .menu-container .menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+}
+.header .wrapper .menu-container .menu__link {
+  text-decoration: none;
+  font-family: "Homenaje";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  color: rgb(255, 255, 255);
+}
+
+.slider-box {
+  background-color: rgb(18, 23, 46);
+}
+.slider-box .wrapper {
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+.slider-box .wrapper .image-slider {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  min-width: 0;
+  margin: 30px;
+}
+.slider-box .wrapper .image-slider .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+.slider-box .wrapper .image-slider .swiper-wrapper .swiper-slide .slide-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.slider-box .wrapper .image-slider .swiper-wrapper .swiper-slide .slide-container img {
+  max-width: 100%;
+}
+.slider-box .wrapper .title-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.slider-box .wrapper .button-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.slider-box .wrapper .button-box .button-box__button {
+  background-color: rgb(249, 240, 164);
+}
+.slider-box .wrapper .button-box .button-box__button .button-link {
+  display: block;
+  padding: 20px 30px;
+  text-decoration: none;
+  font-family: "Homenaje";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  color: rgb(29, 69, 128);
+}
+
+.in-cinema {
+  background-color: rgba(18, 23, 46, 0.9);
+}
+.in-cinema .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px;
+}
+.in-cinema .wrapper .card {
+  margin-right: 30px;
+  width: 450px;
+  height: 250px;
+  background-color: rgb(18, 23, 46);
+}
+
+.boutique {
+  background: url("../img/бутик_кино.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 548px;
+}
+.boutique .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  padding: 40px;
+}
+.boutique .wrapper .title-box {
+  margin-bottom: 100px;
+}
+.boutique .wrapper .text-box {
+  margin-bottom: 100px;
+}
+.boutique .wrapper .text-box__text {
+  font-family: "Homenaje";
+  color: rgb(255, 255, 255);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+}
+.boutique .wrapper .button-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.boutique .wrapper .button-box .button-box__button {
+  background-color: rgb(249, 240, 164);
+}
+.boutique .wrapper .button-box .button-box__button .button-link {
+  display: block;
+  padding: 20px 30px;
+  text-decoration: none;
+  font-family: "Homenaje";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  color: rgb(29, 69, 128);
+}
+
+.threed {
+  background: url("../img/3д_кино.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 548px;
+}
+.threed .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  padding: 40px;
+}
+.threed .wrapper .title-box {
+  margin-bottom: 100px;
+}
+.threed .wrapper .text-box {
+  margin-bottom: 100px;
+}
+.threed .wrapper .text-box__text {
+  font-family: "Homenaje";
+  color: rgb(255, 255, 255);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+}
+.threed .wrapper .button-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.threed .wrapper .button-box .button-box__button {
+  background-color: rgb(249, 240, 164);
+}
+.threed .wrapper .button-box .button-box__button .button-link {
+  display: block;
+  padding: 20px 30px;
+  text-decoration: none;
+  font-family: "Homenaje";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  color: rgb(29, 69, 128);
+}
+
+.footer {
+  background-color: rgb(18, 23, 46);
+  padding: 40px;
+}
+.footer .first-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer .first-row .text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.footer .first-row .text-box__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 80%;
+          flex: 1 1 80%;
+  font-family: "Homenaje";
+  color: rgb(255, 255, 255);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  padding: 0px 0px 0px 40px;
+}
