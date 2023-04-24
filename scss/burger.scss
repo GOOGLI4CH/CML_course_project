@@ -1,0 +1,108 @@
+@import 'variables.scss';
+
+@media (max-width: 767px) {
+    .header {
+
+        .wrapper::before {
+            content: "";
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 56px;
+            width: 100%;
+            background-color: $secondColor;
+            z-index: 5;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .header__menu {
+            .menu__icon {
+                display: block;
+                z-index: 10;
+                position: relative;
+                width: 30px;
+                height: 18px;
+                cursor: pointer;
+            }
+
+            .menu__icon span,
+            .menu__icon::before,
+            .menu__icon::after {
+                left: 0;
+                position: absolute;
+                width: 100%;
+                height: 10%;
+                transition: all 0.3 ease 0s;
+                background-color: #fff;
+            }
+
+            .menu__icon::before,
+            .menu__icon::after {
+                content: "";
+            }
+
+            .menu__icon::before {
+                top: 0;
+            }
+
+            .menu__icon::after {
+                bottom: 0;
+            }
+
+            .menu__icon span {
+                top: 50%;
+                transform: scale(1) translate(0px, -50%);
+            }
+
+            .menu__icon.active span {
+                    transform: scale(0) translate(0px, -50%);
+            }
+
+            .menu__icon.active::before {
+                top: 50%;
+                transform: rotate(-45deg) translate(0px, -50%);
+            }
+
+            .menu__icon.active::after {
+                bottom: 50%;
+                transform: rotate(45deg) translate(0px, 50%);
+            }
+
+            .menu__body {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background-color: $mainColor;
+                padding: 100px 30px 30px 30px;
+                transition: left 0.3s ease 0s;
+                overflow: auto;
+            }
+
+            .menu__body.active {
+                left: 0;
+            }
+
+            .menu__list {
+                flex-flow: column nowrap;
+
+                li {
+                    margin: 30px;
+                }
+
+                li:last-child {
+                    margin-bottom: 0px;
+                }
+
+                .menu__link {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+}

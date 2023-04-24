@@ -1,0 +1,98 @@
+<container>
+    <movie>
+        <name>Аферисты</name>
+        <age>16+</age>
+        <language>Ru</language>
+        <film>films/aferisty.jpg</film>
+        <duration>117 мин.</duration>
+        <limit>13 апреля - 26 апреля</limit>
+    </movie>
+    <movie>
+        <name>Air: Большой прыжок</name>
+        <age>18+</age>
+        <language>Ru</language>
+        <film>films/air-bolshoj-pryzhok.jpg</film>
+        <duration>111 мин.</duration>
+        <limit>22 апреля - 10 мая</limit>
+    </movie>
+    <movie>
+        <name>Бюро магических услуг</name>
+        <age>12+</age>
+        <language>Ru</language>
+        <film>films/byuro-magicheskih-uslug.jpg</film>
+        <duration>119 мин.</duration>
+        <limit>6 апреля - 26 мая</limit>
+    </movie>
+    <movie>
+        <name>Джон Уик 4</name>
+        <age>18+</age>
+        <language>Ru</language>
+        <film>films/dzhon-uik.jpg</film>
+        <duration>169 мин.</duration>
+        <limit>28 марта - 26 апреля</limit>
+    </movie>
+    <movie>
+        <name>Коты Эрмитажа</name>
+        <age>6+</age>
+        <language>Ru</language>
+        <film>films/koty-ermitazha.jpg</film>
+        <duration>89 мин.</duration>
+        <limit>23 марта - 26 апреля</limit>
+    </movie>
+    <movie>
+        <name>Крик 6</name>
+        <age>18+</age>
+        <language>Ru</language>
+        <film>films/krik-6.jpg</film>
+        <duration>125 мин.</duration>
+        <limit>22 апреля - 26 апреля</limit>
+    </movie>
+    <movie>
+        <name>Мизантроп</name>
+        <age>18+</age>
+        <language>Ru</language>
+        <film>films/mizantrop.jpg</film>
+        <duration>125 мин.</duration>
+        <limit>20 апреля - 10 мая</limit>
+    </movie>
+    <movie>
+        <name>Моё прекрасное несчастье</name>
+        <age>16+</age>
+        <language>Ru</language>
+        <film>films/moyo-prekrasnoe-neschaste.jpg</film>
+        <duration>101 мин.</duration>
+        <limit>6 апреля - 26 апреля</limit>
+    </movie>
+    <movie>
+        <name>Подземелья и драконы: Честь среди воров</name>
+        <age>16+</age>
+        <language>Ru</language>
+        <film>films/podzemelya-i-drakony-chest-sredi-vorov.jpg</film>
+        <duration>140 мин.</duration>
+        <limit>6 апреля - 26 апреля</limit>
+    </movie>
+    <movie>
+        <name>Ренфилд</name>
+        <age>18+</age>
+        <language>Ru</language>
+        <film>films/renfild.jpg</film>
+        <duration>103 мин.</duration>
+        <limit>20 апреля - 10 мая</limit>
+    </movie>
+    <movie>
+        <name>Убийство в Париже</name>
+        <age>16+</age>
+        <language>Ru</language>
+        <film>films/ubijstvo-v-parizhe.jpg</film>
+        <duration>90 мин.</duration>
+        <limit>13 апреля - 26 апреля</limit>
+    </movie>
+    <movie>
+        <name>Вызов</name>
+        <age>12+</age>
+        <language>Ru</language>
+        <film>films/vyzovjpg.jpg</film>
+        <duration>173 мин.</duration>
+        <limit>20 апреля - 21 апреля</limit>
+    </movie>
+</container>
