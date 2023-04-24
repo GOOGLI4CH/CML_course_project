@@ -1,15 +1,9 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Homenaje&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css2?family=Homenaje&display=swap&subset=cyrillic-ext");
 .container {
   max-width: 1024px;
   margin: 0 auto;
-}
-
-.title {
-  font-family: "Homenaje";
-  font-weight: 400;
-  font-size: 48px;
-  color: rgb(255, 255, 255);
 }
 
 body.lock {
@@ -53,18 +47,27 @@ body.lock {
 }
 .header .wrapper .header__menu .menu__body .menu__list .menu__link {
   color: rgb(255, 255, 255);
+  font-family: "Homenaje";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 22px;
   text-decoration: none;
+  -webkit-transition: -webkit-text-decoration 0.3 ease 0s;
+  transition: -webkit-text-decoration 0.3 ease 0s;
+  transition: text-decoration 0.3 ease 0s;
+  transition: text-decoration 0.3 ease 0s, -webkit-text-decoration 0.3 ease 0s;
+}
+.header .wrapper .header__menu .menu__body .menu__list a:hover {
+  text-decoration: underline;
 }
 
 main {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 main .slider-box {
   background-color: rgb(18, 23, 46);
+  overflow-x: hidden;
 }
 main .slider-box .wrapper {
   padding: 40px;
@@ -109,6 +112,25 @@ main .slider-box .wrapper .title-box {
       -ms-flex-pack: center;
           justify-content: center;
 }
+main .slider-box .wrapper .title-box .title {
+  font-family: "Homenaje";
+  font-weight: 400;
+  font-size: 48px;
+  color: #F9F0A4;
+  font-size: 64px;
+  line-height: 70px;
+  text-transform: uppercase;
+}
+@media (max-width: 830px) {
+  main .slider-box .wrapper .title-box .title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 450px) {
+  main .slider-box .wrapper .title-box .title {
+    font-size: 24px;
+  }
+}
 main .slider-box .wrapper .button-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -127,7 +149,7 @@ main .slider-box .wrapper .button-box .button-box__button .button-link {
   font-family: "Homenaje";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 22px;
   color: rgb(29, 69, 128);
 }
@@ -435,10 +457,10 @@ main .threed .wrapper .button-box .button-box__button .button-link {
     position: fixed;
     left: 0;
     top: 0;
-    height: 56px;
+    height: 60px;
     width: 100%;
     background-color: #2F375B;
-    z-index: 5;
+    z-index: 3;
   }
   .header .menu {
     display: -webkit-box;

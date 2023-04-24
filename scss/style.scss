@@ -5,13 +5,6 @@
     margin: 0 auto;
 }
 
-.title {
-    font-family: $fontFamily;
-    font-weight: 400;
-    font-size: 48px;
-    color: $mainWhite;
-}
-
 body.lock {
     overflow: hidden;
 }
@@ -44,12 +37,18 @@ body.lock {
 
                     .menu__link {
                         color: $mainWhite;
+                        font-family: $fontFamily;
                         font-style: normal;
                         font-weight: 400;
                         font-size: 20px;
                         line-height: 22px;
                         text-decoration: none;
+                        transition: text-decoration 0.3 ease 0s;
                     }
+
+                    a:hover {
+                        text-decoration: underline;
+                   }
                 }
             }
         }
@@ -58,10 +57,11 @@ body.lock {
 }
 
 main {
-    margin-top: 30px;
+    margin-top: 50px;
 
     .slider-box {
         background-color: $mainColor;
+        overflow-x: hidden;
 
         .wrapper {
             padding: 40px;
@@ -95,6 +95,28 @@ main {
             .title-box {
                 display: flex;
                 justify-content: center;
+
+                .title {
+                    font-family: $fontFamily;
+                    font-weight: 400;
+                    font-size: 48px;
+                    color: $fontColor;
+                    font-size: 64px;
+                    line-height: 70px;
+                    text-transform: uppercase;
+                }
+
+                @media (max-width: 830px) {
+                    .title {
+                        font-size: 30px;
+                    }
+                }
+
+                @media (max-width: 450px) {
+                    .title {
+                        font-size: 24px;
+                    }
+                }
             }
 
             .button-box {
@@ -111,7 +133,7 @@ main {
                         font-family: $fontFamily;
                         font-style: normal;
                         font-weight: 400;
-                        font-size: 20px;
+                        font-size: 24px;
                         line-height: 22px;
                         color: $ButtonFontColor;
                     }
@@ -142,7 +164,6 @@ main {
     .boutique {
         background: url('../img/бутик_кино.png');
         background-repeat: no-repeat;
-        //background-attachment:fixed;
         background-size: cover;
         height: 548px;
 
@@ -195,7 +216,6 @@ main {
     .threed {
         background: url('../img/3д_кино.png');
         background-repeat: no-repeat;
-        //background-attachment:fixed;
         background-size: cover;
         height: 548px;
 
