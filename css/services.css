@@ -62,6 +62,9 @@ body.lock {
 .header .wrapper .header__menu .menu__body .menu__list a:hover {
   text-decoration: underline;
 }
+.header .wrapper .header__menu .menu__body .menu__list a:focus {
+  color: #F9F0A4;
+}
 
 main {
   margin-top: 50px;

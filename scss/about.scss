@@ -46,6 +46,10 @@
                     a:hover {
                         text-decoration: underline;
                     }
+
+                    a:focus {
+                        color: $fontColor;
+                    }
                 }
             }
         }
@@ -90,7 +94,6 @@ main {
         .row {
             width: 100%;
             display: flex;
-            justify-content: space-between;
 
             img {
                 max-width: 100%;
@@ -124,8 +127,26 @@ main {
         }
     }
 
-    .map {
-        padding: 30px;
+    .location {
+        background-color: $secondColor;
+        .title-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .title {
+                font-family: $fontFamily;
+                color: $fontColor;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 48px;
+                line-height: 70px;
+                text-transform: uppercase;
+            }
+        }
+        .map {
+            padding: 30px;
+        }
     }
 }
 

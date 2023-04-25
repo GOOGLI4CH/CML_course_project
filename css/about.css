@@ -58,6 +58,9 @@
 .header .wrapper .header__menu .menu__body .menu__list a:hover {
   text-decoration: underline;
 }
+.header .wrapper .header__menu .menu__body .menu__list a:focus {
+  color: #F9F0A4;
+}
 
 main {
   margin-top: 60px;
@@ -109,9 +112,6 @@ main .about .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 main .about .row img {
   max-width: 100%;
@@ -146,7 +146,30 @@ main .about .row .text-box p a {
 main .about .row .text-box p a:hover {
   text-decoration: underline;
 }
-main .map {
+main .location {
+  background-color: #2F375B;
+}
+main .location .title-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .location .title-box .title {
+  font-family: "Homenaje";
+  color: #F9F0A4;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 70px;
+  text-transform: uppercase;
+}
+main .location .map {
   padding: 30px;
 }
 

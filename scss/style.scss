@@ -50,6 +50,10 @@ body.lock {
                     a:hover {
                         text-decoration: underline;
                    }
+
+                   a:focus {
+                    color: $fontColor;
+                }
                 }
             }
         }
