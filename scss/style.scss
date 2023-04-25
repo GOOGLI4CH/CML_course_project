@@ -44,16 +44,13 @@ body.lock {
                         font-size: 20px;
                         line-height: 22px;
                         text-decoration: none;
-                        transition: text-decoration 0.3 ease 0s;
                     }
 
                     a:hover {
+                        transition: all 0.3s ease 0s;
                         text-decoration: underline;
-                   }
-
-                   a:focus {
-                    color: $fontColor;
-                }
+                        color: $fontColor;
+                    }
                 }
             }
         }

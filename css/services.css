@@ -54,15 +54,11 @@ body.lock {
   font-size: 20px;
   line-height: 22px;
   text-decoration: none;
-  -webkit-transition: -webkit-text-decoration 0.3 ease 0s;
-  transition: -webkit-text-decoration 0.3 ease 0s;
-  transition: text-decoration 0.3 ease 0s;
-  transition: text-decoration 0.3 ease 0s, -webkit-text-decoration 0.3 ease 0s;
 }
 .header .wrapper .header__menu .menu__body .menu__list a:hover {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   text-decoration: underline;
-}
-.header .wrapper .header__menu .menu__body .menu__list a:focus {
   color: #F9F0A4;
 }
 
@@ -324,8 +320,8 @@ main .wrapper .card p {
     position: absolute;
     width: 100%;
     height: 10%;
-    -webkit-transition: all 0.3 ease 0s;
-    transition: all 0.3 ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
     background-color: #fff;
   }
   .header .header__menu .menu__icon::before,

@@ -51,16 +51,13 @@ body.lock {
                         font-size: 20px;
                         line-height: 22px;
                         text-decoration: none;
-                        transition: text-decoration 0.3 ease 0s;
                     }
 
                     a:hover {
+                        transition: all 0.3s ease 0s;
                         text-decoration: underline;
-                    }
-
-                    a:focus {
                         color: $fontColor;
-                    }
+                   }
                 }
             }
         }
@@ -204,6 +201,20 @@ main {
             display: grid;
             grid-template-rows: 75% 10% 15%;
             transition: .5s ease-in-out;
+        }
+
+        @media (max-width: 768px) {
+            .img_film:focus .info {
+                opacity: 1;
+                background: rgba(0, 0, 0, 0.8);
+    
+                width: 249px;
+                height: 354px;
+    
+                display: grid;
+                grid-template-rows: 75% 10% 15%;
+                transition: .5s ease-in-out;
+            }
         }
 
         .time {
