@@ -24,6 +24,8 @@ body.lock {
   left: 0;
   top: 0;
   z-index: 5;
+  -webkit-box-shadow: 0px 5px 1vh rgba(0, 0, 0, 0.568627451);
+          box-shadow: 0px 5px 1vh rgba(0, 0, 0, 0.568627451);
 }
 .header .wrapper {
   margin: 0px 10px;
@@ -53,12 +55,20 @@ body.lock {
       justify-content: space-around;
 }
 .header .wrapper .header__menu .menu__body .menu__list .menu__link {
+  font-family: "Homenaje";
   color: rgb(255, 255, 255);
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 22px;
   text-decoration: none;
+  -webkit-transition: -webkit-text-decoration 0.3 ease 0s;
+  transition: -webkit-text-decoration 0.3 ease 0s;
+  transition: text-decoration 0.3 ease 0s;
+  transition: text-decoration 0.3 ease 0s, -webkit-text-decoration 0.3 ease 0s;
+}
+.header .wrapper .header__menu .menu__body .menu__list a:hover {
+  text-decoration: underline;
 }
 
 main {
@@ -93,11 +103,12 @@ main .poster_kino .options .genres {
   height: 53px;
   background: rgba(29, 69, 128, 0.25);
   border: none;
+  cursor: pointer;
   font-family: "Homenaje";
   font-size: 24px;
   line-height: 26px;
   text-transform: capitalize;
-  color: #fff;
+  color: rgb(255, 255, 255);
   outline: none;
 }
 main .poster_kino .options .session,
@@ -151,6 +162,8 @@ main .films .film {
           align-items: center;
   width: 282px;
   height: 600px;
+  -webkit-box-shadow: 5px 5px 1vh rgba(0, 0, 0, 0.568627451);
+          box-shadow: 5px 5px 1vh rgba(0, 0, 0, 0.568627451);
 }
 main .films .film h3 {
   height: auto;
@@ -316,7 +329,8 @@ main .films .buy {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
   }
-  .footer .first-row .text-box__tex {
+  .footer .first-row .text-box__text {
+    margin-top: 25px;
     padding-left: 0px;
   }
   .footer .second-row {
@@ -509,7 +523,7 @@ main .films .buy {
 .popup__title {
   position: relative;
   font-family: "Homenaje";
-  font-size: 34px;
+  font-size: 32px;
   text-transform: uppercase;
   color: #F9F0A4;
   display: -webkit-box;
@@ -594,6 +608,12 @@ main .films .buy {
   height: 70px;
   width: 70px;
 }
+@media (max-width: 380px) {
+  .popup__text .card .content-box img {
+    height: 50px;
+    width: 50px;
+  }
+}
 .popup__text .card .content-box p {
   margin-left: 30px;
   font-family: "Homenaje";
@@ -602,6 +622,12 @@ main .films .buy {
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
+}
+@media (max-width: 380px) {
+  .popup__text .card .content-box p {
+    margin-left: 15px;
+    font-size: 16px;
+  }
 }
 
 .popup.active {

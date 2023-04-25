@@ -16,6 +16,8 @@ body.lock {
   left: 0;
   top: 0;
   z-index: 5;
+  -webkit-box-shadow: 0px 5px 1vh rgba(0, 0, 0, 0.568627451);
+          box-shadow: 0px 5px 1vh rgba(0, 0, 0, 0.568627451);
 }
 .header .wrapper {
   margin: 0px 10px;
@@ -97,18 +99,18 @@ main .wrapper .title-box .title {
     font-size: 48px;
   }
 }
-main .wrapper .sofa {
+main .wrapper .card {
   width: 100%;
   background-color: #2F375B;
   margin-bottom: 70px;
   position: relative;
 }
-main .wrapper .sofa img {
+main .wrapper .card img {
   position: absolute;
   top: -60px;
   left: 20px;
 }
-main .wrapper .sofa p {
+main .wrapper .card p {
   padding: 30px;
   font-family: "Homenaje";
   font-style: normal;
@@ -118,87 +120,13 @@ main .wrapper .sofa p {
   color: rgb(255, 255, 255);
 }
 @media (max-width: 768px) {
-  main .wrapper .sofa p {
-    font-size: 20px;
-  }
-}
-main .wrapper .tray {
-  width: 100%;
-  background-color: #2F375B;
-  margin-bottom: 70px;
-  position: relative;
-}
-main .wrapper .tray img {
-  position: absolute;
-  top: -60px;
-  left: 20px;
-}
-main .wrapper .tray p {
-  padding: 30px;
-  font-family: "Homenaje";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 26px;
-  color: rgb(255, 255, 255);
-}
-@media (max-width: 768px) {
-  main .wrapper .tray p {
-    font-size: 20px;
-  }
-}
-main .wrapper .joystick {
-  width: 100%;
-  background-color: #2F375B;
-  margin-bottom: 70px;
-  position: relative;
-}
-main .wrapper .joystick img {
-  position: absolute;
-  top: -60px;
-  left: 20px;
-}
-main .wrapper .joystick p {
-  padding: 30px;
-  font-family: "Homenaje";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 26px;
-  color: rgb(255, 255, 255);
-}
-@media (max-width: 768px) {
-  main .wrapper .joystick p {
-    font-size: 20px;
-  }
-}
-main .wrapper .translation {
-  width: 100%;
-  background-color: #2F375B;
-  position: relative;
-}
-main .wrapper .translation img {
-  position: absolute;
-  top: -60px;
-  left: 20px;
-}
-main .wrapper .translation p {
-  padding: 30px;
-  font-family: "Homenaje";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 26px;
-  color: rgb(255, 255, 255);
-}
-@media (max-width: 768px) {
-  main .wrapper .translation p {
+  main .wrapper .card p {
     font-size: 20px;
   }
 }
 
 .footer {
-  background-color: #12172e;
+  background-color: #2F375B;
   padding: 40px;
 }
 .footer .wrapper {
@@ -299,8 +227,8 @@ main .wrapper .translation p {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
   }
-  .footer .first-row .text-box__tex {
-    margin-top: 100px;
+  .footer .first-row .text-box__text {
+    margin-top: 25px;
     padding-left: 0px;
   }
   .footer .second-row {

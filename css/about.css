@@ -1,13 +1,8 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Homenaje&display=swap&subset=cyrillic-ext");
 @import url("https://fonts.googleapis.com/css2?family=Homenaje&display=swap&subset=cyrillic-ext");
 .container {
   max-width: 1024px;
   margin: 0 auto;
-}
-
-body.lock {
-  overflow: hidden;
 }
 
 .header {
@@ -65,231 +60,94 @@ body.lock {
 }
 
 main {
-  margin-top: 50px;
-}
-main .slider-box {
+  margin-top: 60px;
   background-color: #12172e;
-  overflow-x: hidden;
 }
-main .slider-box .wrapper {
-  padding: 40px;
+main .about {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  padding: 30px;
+}
+main .about .title-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 30px;
+}
+main .about .title-box .title {
+  font-family: "Homenaje";
+  color: #F9F0A4;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 70px;
+  text-transform: uppercase;
+}
+@media (max-width: 560px) {
+  main .about .title-box .title {
+    font-size: 48px;
+  }
+}
+@media (max-width: 480px) {
+  main .about .title-box .title {
+    font-size: 38px;
+  }
+}
+main .about .row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main .about .row img {
+  max-width: 100%;
+}
+main .about .row .text-box {
+  margin-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
 }
-main .slider-box .wrapper .image-slider {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  min-width: 0;
-  margin: 30px;
-  position: relative;
-}
-main .slider-box .wrapper .image-slider .swiper-wrapper .swiper-slide {
-  width: 100%;
-  height: 100%;
-}
-main .slider-box .wrapper .image-slider .swiper-wrapper .swiper-slide .slide-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-main .slider-box .wrapper .image-slider .swiper-wrapper .swiper-slide .slide-container img {
-  max-width: 100%;
-}
-main .slider-box .wrapper .title-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-main .slider-box .wrapper .title-box .title {
-  font-family: "Homenaje";
-  font-weight: 400;
-  font-size: 48px;
-  color: #F9F0A4;
-  font-size: 64px;
-  line-height: 70px;
-  text-transform: uppercase;
-}
-@media (max-width: 830px) {
-  main .slider-box .wrapper .title-box .title {
-    font-size: 30px;
-  }
-}
-@media (max-width: 450px) {
-  main .slider-box .wrapper .title-box .title {
-    font-size: 24px;
-  }
-}
-main .slider-box .wrapper .button-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-main .slider-box .wrapper .button-box .button-box__button {
-  background-color: #f9f0a4;
-}
-main .slider-box .wrapper .button-box .button-box__button .button-link {
-  display: block;
-  padding: 20px 30px;
-  text-decoration: none;
-  font-family: "Homenaje";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 22px;
-  color: rgb(29, 69, 128);
-}
-main .in-cinema {
-  background-color: #2F375B;
-}
-main .in-cinema .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 40px;
-}
-main .in-cinema .wrapper .card {
-  margin-right: 30px;
-  width: 450px;
-  height: 250px;
-  background-color: #12172e;
-}
-main .boutique {
-  background: url("../img/бутик_кино.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 548px;
-}
-main .boutique .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  padding: 40px;
-}
-main .boutique .wrapper .title-box {
-  margin-bottom: 100px;
-}
-main .boutique .wrapper .text-box {
-  margin-bottom: 100px;
-}
-main .boutique .wrapper .text-box__text {
+main .about .row .text-box p {
   font-family: "Homenaje";
   color: rgb(255, 255, 255);
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 22px;
+  margin: 5px;
 }
-main .boutique .wrapper .button-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-main .boutique .wrapper .button-box .button-box__button {
-  background-color: #f9f0a4;
-}
-main .boutique .wrapper .button-box .button-box__button .button-link {
-  display: block;
-  padding: 20px 30px;
-  text-decoration: none;
-  font-family: "Homenaje";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 22px;
-  color: rgb(29, 69, 128);
-}
-main .threed {
-  background: url("../img/3д_кино.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 548px;
-}
-main .threed .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  padding: 40px;
-}
-main .threed .wrapper .title-box {
-  margin-bottom: 100px;
-}
-main .threed .wrapper .text-box {
-  margin-bottom: 100px;
-}
-main .threed .wrapper .text-box__text {
-  font-family: "Homenaje";
+main .about .row .text-box p a {
   color: rgb(255, 255, 255);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 22px;
-}
-main .threed .wrapper .button-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-main .threed .wrapper .button-box .button-box__button {
-  background-color: #f9f0a4;
-}
-main .threed .wrapper .button-box .button-box__button .button-link {
-  display: block;
-  padding: 20px 30px;
+  -webkit-transition: -webkit-text-decoration 0.3s ease 0s;
+  transition: -webkit-text-decoration 0.3s ease 0s;
+  transition: text-decoration 0.3s ease 0s;
+  transition: text-decoration 0.3s ease 0s, -webkit-text-decoration 0.3s ease 0s;
   text-decoration: none;
-  font-family: "Homenaje";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 22px;
-  color: rgb(29, 69, 128);
+}
+main .about .row .text-box p a:hover {
+  text-decoration: underline;
+}
+main .map {
+  padding: 30px;
 }
 
 .footer {
@@ -452,6 +310,15 @@ main .threed .wrapper .button-box .button-box__button .button-link {
   .footer .second-row > *:nth-child(12) {
     -ms-grid-row: 11;
     -ms-grid-column: 3;
+  }
+  main .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  main .row .text-box {
+    margin: 15px 0px 0px 0px;
   }
 }
 @media (max-width: 767px) {

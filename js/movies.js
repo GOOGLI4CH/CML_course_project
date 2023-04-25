@@ -1,4 +1,4 @@
-import { ModalWindow } from "./script.js";
+import { ModalWindow } from "./popup.js";
 
 let table = (arr_tag, arr) => {
   let i = 0;
