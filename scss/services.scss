@@ -64,7 +64,7 @@ main {
         flex-flow: column nowrap;
 
         .title-box {
-            padding: 40px;
+            padding: 50px;
             display: flex;
             justify-content: center;
 
@@ -76,6 +76,12 @@ main {
                 font-size: 64px;
                 line-height: 70px;
                 text-transform: uppercase;
+            }
+
+            @media (max-width: 768px) {
+                .title {
+                    font-size: 48px;
+                }
             }
         }
 
@@ -100,6 +106,12 @@ main {
                 line-height: 26px;
                 color: $mainWhite;
             }
+
+            @media (max-width: 768px) {
+                p {
+                    font-size: 20px;
+                }
+            }
         }
 
         .tray {
@@ -122,6 +134,12 @@ main {
                 font-size: 24px;
                 line-height: 26px;
                 color: $mainWhite;
+            }
+
+            @media (max-width: 768px) {
+                p {
+                    font-size: 20px;
+                }
             }
         }
 
@@ -146,6 +164,12 @@ main {
                 line-height: 26px;
                 color: $mainWhite;
             }
+
+            @media (max-width: 768px) {
+                p {
+                    font-size: 20px;
+                }
+            }
         }
 
         .translation {
@@ -167,6 +191,12 @@ main {
                 font-size: 24px;
                 line-height: 26px;
                 color: $mainWhite;
+            }
+
+            @media (max-width: 768px) {
+                p {
+                    font-size: 20px;
+                }
             }
         }
     }

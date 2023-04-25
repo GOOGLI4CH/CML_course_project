@@ -1,0 +1,122 @@
+@import 'variables.scss';
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: $popupColor;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    overflow: auto;
+
+    &__body {
+        min-height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 30px 50px;
+    }
+
+    &__content {
+        background-color: $mainColor;
+        max-width: 1024px;
+        padding: 30px;
+    }
+
+    &__title {
+        position: relative;
+        font-family: $fontFamily;
+        font-size: 34px;
+        text-transform: uppercase;
+        color: $fontColor;
+        display: flex;
+        justify-content: center;
+
+        a {
+            color: $mainWhite;
+            text-decoration: none;
+            position: absolute;
+            right: 10px;
+            top: 30px;
+            font-size: 34px;
+            transition: color 0.3s ease 0s;
+        }
+
+        a:hover {
+            color: $fontColor;
+        }
+
+        @media (max-width: 680px) {
+            font-size: 30px;
+
+            a {
+                top: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            font-size: 20px;
+
+            a {
+                top: 10px;
+            }
+        }
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+        flex-flow: column nowrap;
+
+        .card {
+            margin-bottom: 20px;
+
+            .title-box {
+                padding: 15px;
+                width: 100%;
+                background-color: $secondColor;
+
+                .title {
+                    font-family: $fontFamily;
+                    color: $mainWhite;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 32px;
+                    line-height: 40px;
+                }
+            }
+
+            .content-box {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: $modalColor;
+                padding: 20px;
+
+                img {
+                    max-width: 100%;
+                    height: 70px;
+                    width: 70px;
+                }
+
+                p {
+                    margin-left: 30px;
+                    font-family: $fontFamily;
+                    color: $mainWhite;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+
+
+.popup.active {
+    opacity: 1;
+    visibility: visible;
+}

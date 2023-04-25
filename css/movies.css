@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Homenaje&display=swap&subset=cyrillic-ext");
 @import url("https://fonts.googleapis.com/css2?family=Homenaje&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css2?family=Homenaje&display=swap&subset=cyrillic-ext");
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1024px;
   margin: 0 auto;
@@ -56,17 +61,15 @@
   text-decoration: none;
 }
 
-/*------------------------MAIN-------------------------*/
 main {
-  background-color: rgb(18, 23, 46);
+  background-color: #12172e;
   margin-top: 30px;
 }
 main .poster_kino h1 {
   width: 100%;
   height: 75px;
   text-align: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 50px 0px;
   font-family: "Homenaje";
   font-size: 64px;
   line-height: 70px;
@@ -109,7 +112,8 @@ main .poster_kino .select2 {
   background: url("../icons/calendar.svg") no-repeat;
   background-position: right center;
 }
-main .poster_kino .session, main .poster_kino .genres {
+main .poster_kino .session,
+main .poster_kino .genres {
   overflow: hidden;
   padding-left: 40px;
 }
@@ -198,16 +202,17 @@ main .films .data {
   line-height: 18px;
 }
 main .films .buy {
-  background: #F9F0A4;
-  color: #1D4580;
+  background: #f9f0a4;
+  color: rgb(29, 69, 128);
   font-size: 40px;
   line-height: 44px;
   border: none;
+  text-decoration: none;
+  text-align: center;
 }
 
-/*------------------------FOOTER-----------------------*/
 .footer {
-  background-color: rgb(18, 23, 46);
+  background-color: #12172e;
   padding: 40px;
 }
 .footer .wrapper {
@@ -448,7 +453,7 @@ main .films .buy {
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: rgb(18, 23, 46);
+    background-color: #12172e;
     padding: 100px 30px 30px 30px;
     -webkit-transition: left 0.3s ease 0s;
     transition: left 0.3s ease 0s;
@@ -472,4 +477,134 @@ main .films .buy {
   .header .header__menu .menu__list .menu__link {
     font-size: 26px;
   }
+}
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(18, 23, 46, 0.9);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  overflow: auto;
+}
+.popup__body {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  padding: 30px 50px;
+}
+.popup__content {
+  background-color: #12172e;
+  max-width: 1024px;
+  padding: 30px;
+}
+.popup__title {
+  position: relative;
+  font-family: "Homenaje";
+  font-size: 34px;
+  text-transform: uppercase;
+  color: #F9F0A4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.popup__title a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  font-size: 34px;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+.popup__title a:hover {
+  color: #F9F0A4;
+}
+@media (max-width: 680px) {
+  .popup__title {
+    font-size: 30px;
+  }
+  .popup__title a {
+    top: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .popup__title {
+    font-size: 20px;
+  }
+  .popup__title a {
+    top: 10px;
+  }
+}
+.popup__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+.popup__text .card {
+  margin-bottom: 20px;
+}
+.popup__text .card .title-box {
+  padding: 15px;
+  width: 100%;
+  background-color: #2F375B;
+}
+.popup__text .card .title-box .title {
+  font-family: "Homenaje";
+  color: rgb(255, 255, 255);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+}
+.popup__text .card .content-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1d4580;
+  padding: 20px;
+}
+.popup__text .card .content-box img {
+  max-width: 100%;
+  height: 70px;
+  width: 70px;
+}
+.popup__text .card .content-box p {
+  margin-left: 30px;
+  font-family: "Homenaje";
+  color: rgb(255, 255, 255);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.popup.active {
+  opacity: 1;
+  visibility: visible;
 }

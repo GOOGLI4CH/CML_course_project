@@ -1,4 +1,8 @@
-@import  'variables.scss';
+@import 'variables.scss';
+
+body.lock {
+    overflow: hidden;
+}
 
 .container {
     max-width: 1024px;
@@ -51,18 +55,17 @@
         }
     }
 }
-/*------------------------MAIN-------------------------*/
+
 main {
     background-color: $mainColor;
     margin-top: 30px;
-    
+
     .poster_kino {
         h1 {
             width: 100%;
             height: 75px;
             text-align: center;
-            padding-top: 40px;
-            padding-bottom: 40px;
+            padding: 50px 0px;
             font-family: $fontFamily;
             font-size: 64px;
             line-height: 70px;
@@ -72,7 +75,7 @@ main {
         }
 
         .options {
-            
+
             width: 80%;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
@@ -84,7 +87,7 @@ main {
             .date,
             .session,
             .genres {
-                
+
                 height: 53px;
                 background: rgba(29, 69, 128, .25);
                 border: none;
@@ -98,29 +101,34 @@ main {
 
                 outline: none;
             }
+
             .session,
             .genres {
                 width: 282px;
             }
         }
+
         .select {
             background: url('../icons/calendar.svg') no-repeat;
             background-position: right center;
         }
+
         .select2 {
             background: url('../icons/calendar.svg') no-repeat;
             background-position: right center;
         }
 
-        .session, .genres {
+        .session,
+        .genres {
             overflow: hidden;
             padding-left: 40px;
         }
-        
+
         .date {
             width: 282px;
             padding-left: 40px;
         }
+
         .date::-webkit-calendar-picker-indicator {
             color: transparent;
             opacity: 1;
@@ -133,16 +141,14 @@ main {
         width: 80%;
         height: auto;
         display: grid;
-
         grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
         grid-template-rows: repeat(3, auto);
         grid-gap: 63px;
-
         justify-items: center;
-        
         margin: 0 auto;
+
         .film {
-            
+
 
             background: $secondColor;
 
@@ -195,55 +201,56 @@ main {
             transition: .5s ease-in-out;
         }
 
-            .time {
-                font-size: 20px;
-                line-height: 22px;
+        .time {
+            font-size: 20px;
+            line-height: 22px;
 
-                justify-self: center;
-                align-self: center;
-            }
+            justify-self: center;
+            align-self: center;
+        }
 
-            .data {
-                justify-self: center;
-                font-size: 16px;
-                line-height: 18px;
-            }
+        .data {
+            justify-self: center;
+            font-size: 16px;
+            line-height: 18px;
+        }
 
-            .buy {
-                background: $fontColor;
-                color: #1D4580;
-                font-size: 40px;
-                line-height: 44px;
-                border: none;
-            }
+        .buy {
+            background: $mainButtonColor;
+            color: $ButtonFontColor;
+            font-size: 40px;
+            line-height: 44px;
+            border: none;
+            text-decoration: none;
+            text-align: center;
         }
     }
-
-
-/*------------------------FOOTER-----------------------*/
+}
 
 .footer {
     background-color: $mainColor;
     padding: 40px;
+
     .wrapper {
         display: grid;
     }
+
     .first-row {
         display: grid;
         grid-template-columns: 40% 60%;
 
-        .text-box__text {   
+        .text-box__text {
             font-family: $fontFamily;
             color: $mainWhite;
             font-size: 20px;
             line-height: 22px;
         }
-        
+
     }
 
     .second-row {
         display: grid;
-        grid-template-columns:  5% 45% 5% 45%;
+        grid-template-columns: 5% 45% 5% 45%;
         grid-template-rows: repeat(3, 1fr);
         grid-gap: 30px;
 
@@ -268,6 +275,7 @@ main {
             }
         }
     }
+
     .footer {
         .first-row {
             grid-template-columns: 1fr;
@@ -275,7 +283,7 @@ main {
 
             .text-box__tex {
                 padding-left: 0px;
-            } 
+            }
         }
 
         .second-row {
@@ -285,6 +293,7 @@ main {
         }
     }
 }
+
 @media (max-width: 425px) {
     main {
         .poster_kino {
@@ -296,3 +305,4 @@ main {
 }
 
 @import 'burger.scss';
+@import 'popup_buy.scss';

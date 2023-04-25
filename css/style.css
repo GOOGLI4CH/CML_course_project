@@ -66,7 +66,7 @@ main {
   margin-top: 50px;
 }
 main .slider-box {
-  background-color: rgb(18, 23, 46);
+  background-color: #12172e;
   overflow-x: hidden;
 }
 main .slider-box .wrapper {
@@ -88,6 +88,7 @@ main .slider-box .wrapper .image-slider {
           flex: 1 1 auto;
   min-width: 0;
   margin: 30px;
+  position: relative;
 }
 main .slider-box .wrapper .image-slider .swiper-wrapper .swiper-slide {
   width: 100%;
@@ -140,7 +141,7 @@ main .slider-box .wrapper .button-box {
           justify-content: center;
 }
 main .slider-box .wrapper .button-box .button-box__button {
-  background-color: rgb(249, 240, 164);
+  background-color: #f9f0a4;
 }
 main .slider-box .wrapper .button-box .button-box__button .button-link {
   display: block;
@@ -176,7 +177,7 @@ main .in-cinema .wrapper .card {
   margin-right: 30px;
   width: 450px;
   height: 250px;
-  background-color: rgb(18, 23, 46);
+  background-color: #12172e;
 }
 main .boutique {
   background: url("../img/бутик_кино.png");
@@ -220,7 +221,7 @@ main .boutique .wrapper .button-box {
           justify-content: flex-end;
 }
 main .boutique .wrapper .button-box .button-box__button {
-  background-color: rgb(249, 240, 164);
+  background-color: #f9f0a4;
 }
 main .boutique .wrapper .button-box .button-box__button .button-link {
   display: block;
@@ -275,7 +276,7 @@ main .threed .wrapper .button-box {
           justify-content: flex-end;
 }
 main .threed .wrapper .button-box .button-box__button {
-  background-color: rgb(249, 240, 164);
+  background-color: #f9f0a4;
 }
 main .threed .wrapper .button-box .button-box__button .button-link {
   display: block;
@@ -290,7 +291,7 @@ main .threed .wrapper .button-box .button-box__button .button-link {
 }
 
 .footer {
-  background-color: rgb(18, 23, 46);
+  background-color: #12172e;
   padding: 40px;
 }
 .footer .wrapper {
@@ -524,7 +525,7 @@ main .threed .wrapper .button-box .button-box__button .button-link {
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: rgb(18, 23, 46);
+    background-color: #12172e;
     padding: 100px 30px 30px 30px;
     -webkit-transition: left 0.3s ease 0s;
     transition: left 0.3s ease 0s;

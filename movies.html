@@ -23,7 +23,7 @@
                         <ul class="menu__list">
                             <li><a href="" class="menu__link">Прайс</a></li>
                             <li><a href="" class="menu__link">О Кинотеатре</a></li>
-                            <li><a href="" class="menu__link">Услуги</a></li>
+                            <li><a href="services.html" class="menu__link">Услуги</a></li>
                             <li><a href="" class="menu__link">Контакты</a></li>
                         </ul>
                     </nav>
@@ -87,8 +87,68 @@
             </div>
         </div>
     </footer>
-    <script src="js/movies.js"></script>
-    <script src="js/script.js"></script>
+    <div class="popup">
+        <div class="popup__body">
+            <div class="body__content">
+                <div class="popup__title">
+                    <h1>Оплата</h1>
+                    <a href="" class="popup__close">X</a>
+                </div>
+                <div class="popup__text">
+                    <div class="card">
+                        <div class="title-box">
+                            <h3 class="title">Банковской платежной картой</h3>
+                        </div>
+                        <div class="content-box">
+                            <img src="icons/credit-card.svg" alt="">
+                            <p>Оплата с использованием банковских платежных карточек.
+                                После выбора данного способа, Вы будете переадрессованы
+                                на безопасную страницу оплаты банковскими картами.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="title-box">
+                            <h3 class="title">Оплата в системе РАСЧЕТ (ЕРИП)</h3>
+                        </div>
+                        <div class="content-box">
+                            <img src="icons/raschet.png" alt="">
+                            <p>Оплата с использованием системе интернет-бакинг, через 
+                                инфокиоски и банкоиаты, WebMoney, EasyPay, терминалы QIWI.
+                                В  дереве ЕРИП необходимо выбрать: “Билеты, Дотереи”-> “кинотеатр”
+                                Или выбрать оплату по коду услуги - 7282936.
+                                номер заказа для оплаты - хххххххх.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="title-box">
+                            <h3 class="title">Подарочный сертификат</h3>
+                        </div>
+                        <div class="content-box">
+                            <img src="icons/sertificate.svg" alt="">
+                            <p>Оплата с использованием подарочного сертификата.
+                                После выбора данного способа, Вы будете переадресованны 
+                                на безопасную страницу оплаты сертификатами.
+                                В случае доплаты недостающей суммы заказа банковской картой 
+                                к сумме доплаты будет добавлен сервисный сбор.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="title-box">
+                            <h3 class="title">Оплатить в кассе</h3>
+                        </div>
+                        <div class="content-box">
+                            <img src="icons/cash-atm.svg" alt="">
+                            <p>Оплата в кассе выбранного заведения.
+                                Отмена заказа произойдет за час до сеанса, в случае не оплаты.
+                                При оплате необходимо сообщить номер заказа - ххххххххх</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/movies.js"></script>
+    <script type="module" src="js/script.js"></script>
 </body>
 
 </html>
