@@ -10,6 +10,10 @@ body.lock {
   overflow: hidden;
 }
 
+body {
+  background-color: #12172e;
+}
+
 .header {
   background-color: #2F375B;
   position: fixed;
@@ -52,9 +56,14 @@ body.lock {
   font-family: "Homenaje";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 22px;
   text-decoration: none;
+}
+@media (max-width: 768px) {
+  .header .wrapper .header__menu .menu__body .menu__list .menu__link {
+    font-size: 24px;
+  }
 }
 .header .wrapper .header__menu .menu__body .menu__list a:hover {
   -webkit-transition: all 0.3s ease 0s;
@@ -84,16 +93,9 @@ main .slider-box .wrapper {
           flex-flow: column nowrap;
 }
 main .slider-box .wrapper .image-slider {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  min-width: 0;
-  margin: 30px;
-  position: relative;
-}
-main .slider-box .wrapper .image-slider .swiper-wrapper .swiper-slide {
   width: 100%;
   height: 100%;
+  margin: 30px;
 }
 main .slider-box .wrapper .image-slider .swiper-wrapper .swiper-slide .slide-container {
   display: -webkit-box;
@@ -105,6 +107,8 @@ main .slider-box .wrapper .image-slider .swiper-wrapper .swiper-slide .slide-con
 }
 main .slider-box .wrapper .image-slider .swiper-wrapper .swiper-slide .slide-container img {
   max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .slider-box .wrapper .title-box {
   display: -webkit-box;
@@ -143,17 +147,35 @@ main .slider-box .wrapper .button-box {
 }
 main .slider-box .wrapper .button-box .button-box__button {
   background-color: #f9f0a4;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
 }
-main .slider-box .wrapper .button-box .button-box__button .button-link {
+main .slider-box .wrapper .button-box .button-box__button a.button-link {
   display: block;
   padding: 20px 30px;
   text-decoration: none;
   font-family: "Homenaje";
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 22px;
   color: rgb(29, 69, 128);
+  -webkit-transition: -webkit-text-decoration 0.3s ease 0s;
+  transition: -webkit-text-decoration 0.3s ease 0s;
+  transition: text-decoration 0.3s ease 0s;
+  transition: text-decoration 0.3s ease 0s, -webkit-text-decoration 0.3s ease 0s;
+}
+@media (max-width: 650px) {
+  main .slider-box .wrapper .button-box .button-box__button a.button-link {
+    font-size: 22px;
+    padding: 10px 15px;
+  }
+}
+main .slider-box .wrapper .button-box .button-box__button a.button-link:hover {
+  text-decoration: underline;
+}
+main .slider-box .wrapper .button-box .button-box__button:hover {
+  background-color: #f4e46d;
 }
 main .in-cinema {
   background-color: #2F375B;
@@ -184,7 +206,6 @@ main .boutique {
   background: url("../img/бутик_кино.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 548px;
 }
 main .boutique .wrapper {
   display: -webkit-box;
@@ -197,10 +218,19 @@ main .boutique .wrapper {
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-  padding: 40px;
+  padding: 15px;
 }
 main .boutique .wrapper .title-box {
   margin-bottom: 100px;
+  margin-top: 50px;
+}
+main .boutique .wrapper .title-box .title {
+  font-family: "Homenaje";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 70px;
+  color: rgb(255, 255, 255);
 }
 main .boutique .wrapper .text-box {
   margin-bottom: 100px;
@@ -210,8 +240,11 @@ main .boutique .wrapper .text-box__text {
   color: rgb(255, 255, 255);
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 22px;
+}
+main .boutique .wrapper .text-box__text p {
+  margin-bottom: 15px;
 }
 main .boutique .wrapper .button-box {
   display: -webkit-box;
@@ -223,23 +256,40 @@ main .boutique .wrapper .button-box {
 }
 main .boutique .wrapper .button-box .button-box__button {
   background-color: #f9f0a4;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
 }
-main .boutique .wrapper .button-box .button-box__button .button-link {
+main .boutique .wrapper .button-box .button-box__button a.button-link {
   display: block;
   padding: 20px 30px;
   text-decoration: none;
   font-family: "Homenaje";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 28px;
   line-height: 22px;
   color: rgb(29, 69, 128);
+  -webkit-transition: -webkit-text-decoration 0.3s ease 0s;
+  transition: -webkit-text-decoration 0.3s ease 0s;
+  transition: text-decoration 0.3s ease 0s;
+  transition: text-decoration 0.3s ease 0s, -webkit-text-decoration 0.3s ease 0s;
+}
+@media (max-width: 650px) {
+  main .boutique .wrapper .button-box .button-box__button a.button-link {
+    font-size: 22px;
+    padding: 10px 15px;
+  }
+}
+main .boutique .wrapper .button-box .button-box__button a.button-link:hover {
+  text-decoration: underline;
+}
+main .boutique .wrapper .button-box .button-box__button:hover {
+  background-color: #f4e46d;
 }
 main .threed {
   background: url("../img/3д_кино.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 548px;
 }
 main .threed .wrapper {
   display: -webkit-box;
@@ -252,10 +302,19 @@ main .threed .wrapper {
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-  padding: 40px;
+  padding: 15px;
 }
 main .threed .wrapper .title-box {
   margin-bottom: 100px;
+  margin-top: 50px;
+}
+main .threed .wrapper .title-box .title {
+  font-family: "Homenaje";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 70px;
+  color: rgb(255, 255, 255);
 }
 main .threed .wrapper .text-box {
   margin-bottom: 100px;
@@ -265,8 +324,11 @@ main .threed .wrapper .text-box__text {
   color: rgb(255, 255, 255);
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 22px;
+}
+main .threed .wrapper .text-box__text p {
+  margin-bottom: 15px;
 }
 main .threed .wrapper .button-box {
   display: -webkit-box;
@@ -278,17 +340,35 @@ main .threed .wrapper .button-box {
 }
 main .threed .wrapper .button-box .button-box__button {
   background-color: #f9f0a4;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
 }
-main .threed .wrapper .button-box .button-box__button .button-link {
+main .threed .wrapper .button-box .button-box__button a.button-link {
   display: block;
   padding: 20px 30px;
   text-decoration: none;
   font-family: "Homenaje";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 28px;
   line-height: 22px;
   color: rgb(29, 69, 128);
+  -webkit-transition: -webkit-text-decoration 0.3s ease 0s;
+  transition: -webkit-text-decoration 0.3s ease 0s;
+  transition: text-decoration 0.3s ease 0s;
+  transition: text-decoration 0.3s ease 0s, -webkit-text-decoration 0.3s ease 0s;
+}
+@media (max-width: 650px) {
+  main .threed .wrapper .button-box .button-box__button a.button-link {
+    font-size: 22px;
+    padding: 10px 15px;
+  }
+}
+main .threed .wrapper .button-box .button-box__button a.button-link:hover {
+  text-decoration: underline;
+}
+main .threed .wrapper .button-box .button-box__button:hover {
+  background-color: #f4e46d;
 }
 
 .footer {
@@ -319,6 +399,9 @@ main .threed .wrapper .button-box .button-box__button .button-link {
   -ms-grid-rows: 1fr 30px 1fr 30px 1fr;
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 30px;
 }
 .footer .second-row > *:nth-child(1) {
@@ -369,13 +452,19 @@ main .threed .wrapper .button-box .button-box__button .button-link {
   -ms-grid-row: 5;
   -ms-grid-column: 7;
 }
-.footer .second-row p {
+.footer .second-row a {
   font-size: 20px;
   line-height: 22px;
+  text-decoration: none;
   font-family: "Homenaje";
   color: rgb(255, 255, 255);
   -ms-grid-column-align: start;
       justify-self: start;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.footer .second-row a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {

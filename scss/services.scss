@@ -9,6 +9,10 @@ body.lock {
     overflow: hidden;
 }
 
+body{
+    background-color: $mainColor;
+}
+
 .header {
     background-color: $secondColor;
     position: fixed;
@@ -44,6 +48,9 @@ body.lock {
                         font-size: 20px;
                         line-height: 22px;
                         text-decoration: none;
+                        @media (max-width:768px) {
+                            font-size: 24px;
+                        }
                     }
 
                     a:hover {
@@ -144,16 +151,20 @@ main {
         grid-template-columns: 5% 45% 5% 45%;
         grid-template-rows: repeat(3, 1fr);
         grid-gap: 30px;
-
+        align-items: center;
         margin-top: 30px;
 
-        p {
+        a {
             font-size: 20px;
             line-height: 22px;
-
+            text-decoration: none;
             font-family: $fontFamily;
             color: $mainWhite;
             justify-self: start;
+            transition: all 0.3s ease 0s;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     }
 }

@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Homenaje&display=swap&subset=cyrillic-ext");
 @import url("https://fonts.googleapis.com/css2?family=Homenaje&display=swap&subset=cyrillic-ext");
 @import url("https://fonts.googleapis.com/css2?family=Homenaje&display=swap&subset=cyrillic-ext");
+body {
+  background-color: #12172e;
+}
+
 body.lock {
   overflow: hidden;
 }
@@ -62,6 +66,11 @@ body.lock {
   font-size: 20px;
   line-height: 22px;
   text-decoration: none;
+}
+@media (max-width: 768px) {
+  .header .wrapper .header__menu .menu__body .menu__list .menu__link {
+    font-size: 24px;
+  }
 }
 .header .wrapper .header__menu .menu__body .menu__list a:hover {
   -webkit-transition: all 0.3s ease 0s;
@@ -148,6 +157,7 @@ main .films {
   grid-gap: 63px;
   justify-items: center;
   margin: 0 auto;
+  padding-bottom: 20px;
 }
 main .films .film {
   background: #2F375B;
@@ -184,7 +194,11 @@ main .films .film .img_film {
   height: 354px;
 }
 main .films .film .img_film .info {
+  width: 100%;
   opacity: 0;
+}
+main .films .film .img_film .info .popup__link {
+  width: 100%;
 }
 main .films .img_film:hover .info {
   opacity: 1;
@@ -197,20 +211,6 @@ main .films .img_film:hover .info {
   grid-template-rows: 75% 10% 15%;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-}
-@media (max-width: 768px) {
-  main .films .img_film:focus .info {
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.8);
-    width: 249px;
-    height: 354px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: 75% 10% 15%;
-    grid-template-rows: 75% 10% 15%;
-    -webkit-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
-  }
 }
 main .films .time {
   font-size: 20px;
@@ -238,7 +238,7 @@ main .films .buy {
 }
 
 .footer {
-  background-color: #12172e;
+  background-color: #2F375B;
   padding: 40px;
 }
 .footer .wrapper {
@@ -265,6 +265,9 @@ main .films .buy {
   -ms-grid-rows: 1fr 30px 1fr 30px 1fr;
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 30px;
 }
 .footer .second-row > *:nth-child(1) {
@@ -315,13 +318,19 @@ main .films .buy {
   -ms-grid-row: 5;
   -ms-grid-column: 7;
 }
-.footer .second-row p {
+.footer .second-row a {
   font-size: 20px;
   line-height: 22px;
+  text-decoration: none;
   font-family: "Homenaje";
   color: rgb(255, 255, 255);
   -ms-grid-column-align: start;
       justify-self: start;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.footer .second-row a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -516,6 +525,8 @@ main .films .buy {
   opacity: 0;
   visibility: hidden;
   overflow: auto;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 .popup__body {
   min-height: 100%;

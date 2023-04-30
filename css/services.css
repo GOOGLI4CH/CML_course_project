@@ -9,6 +9,10 @@ body.lock {
   overflow: hidden;
 }
 
+body {
+  background-color: #12172e;
+}
+
 .header {
   background-color: #2F375B;
   position: fixed;
@@ -54,6 +58,11 @@ body.lock {
   font-size: 20px;
   line-height: 22px;
   text-decoration: none;
+}
+@media (max-width: 768px) {
+  .header .wrapper .header__menu .menu__body .menu__list .menu__link {
+    font-size: 24px;
+  }
 }
 .header .wrapper .header__menu .menu__body .menu__list a:hover {
   -webkit-transition: all 0.3s ease 0s;
@@ -152,6 +161,9 @@ main .wrapper .card p {
   -ms-grid-rows: 1fr 30px 1fr 30px 1fr;
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 30px;
 }
 .footer .second-row > *:nth-child(1) {
@@ -202,13 +214,19 @@ main .wrapper .card p {
   -ms-grid-row: 5;
   -ms-grid-column: 7;
 }
-.footer .second-row p {
+.footer .second-row a {
   font-size: 20px;
   line-height: 22px;
+  text-decoration: none;
   font-family: "Homenaje";
   color: rgb(255, 255, 255);
   -ms-grid-column-align: start;
       justify-self: start;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.footer .second-row a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
