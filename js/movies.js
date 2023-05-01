@@ -38,7 +38,11 @@ let parse = (xmlString => {
                   <div class="info">
                       <p class="time">${durations_arr[i]}</p>
                       <p class="data">${limits_arr[i]}</p>
-                      <a href="#buy" class="buy popup-link">Купить</a>
+                      <div class="button-box">
+                        <div class="button-box__button">
+                            <a href="#buy" class="button-link popup-link">Купить</a>
+                        </div>
+                    </div>
                   </div>
               </div>
           </div>`

@@ -1,7 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Homenaje&display=swap&subset=cyrillic-ext");
-@import url("https://fonts.googleapis.com/css2?family=Homenaje&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
 body {
-  background-color: #12172e;
+  background-color: #6b7193;
 }
 
 .container {
@@ -10,14 +12,14 @@ body {
 }
 
 .header {
-  background-color: #2F375B;
+  background-color: #202733;
   position: fixed;
   width: 100vw;
   left: 0;
   top: 0;
   z-index: 5;
-  -webkit-box-shadow: 0px 5px 1vh rgba(0, 0, 0, 0.568627451);
-          box-shadow: 0px 5px 1vh rgba(0, 0, 0, 0.568627451);
+  -webkit-box-shadow: 0px 15px 20px rgba(29, 37, 39, 0.4);
+          box-shadow: 0px 15px 20px rgba(29, 37, 39, 0.4);
 }
 .header .wrapper {
   margin: 0px 10px;
@@ -47,11 +49,11 @@ body {
       justify-content: space-around;
 }
 .header .wrapper .header__menu .menu__body .menu__list .menu__link {
-  color: rgb(255, 255, 255);
-  font-family: "Homenaje";
+  color: #fff;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 22px;
   text-decoration: none;
 }
@@ -60,16 +62,20 @@ body {
     font-size: 24px;
   }
 }
+.header .wrapper .header__menu .menu__body .menu__list li:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
 .header .wrapper .header__menu .menu__body .menu__list a:hover {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   text-decoration: underline;
-  color: #F9F0A4;
+  color: #498fcc;
 }
 
 main {
   margin-top: 60px;
-  background-color: #12172e;
+  background-color: #6b7193;
 }
 main .about {
   display: -webkit-box;
@@ -94,8 +100,8 @@ main .about .title-box {
   margin-bottom: 30px;
 }
 main .about .title-box .title {
-  font-family: "Homenaje";
-  color: #F9F0A4;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
   font-style: normal;
   font-weight: 400;
   font-size: 64px;
@@ -120,6 +126,8 @@ main .about .row {
 }
 main .about .row img {
   max-width: 100%;
+  -webkit-box-shadow: 0px 15px 20px rgba(29, 37, 39, 0.4);
+          box-shadow: 0px 15px 20px rgba(29, 37, 39, 0.4);
 }
 main .about .row .text-box {
   margin-left: 30px;
@@ -132,8 +140,8 @@ main .about .row .text-box {
           flex-flow: column nowrap;
 }
 main .about .row .text-box p {
-  font-family: "Homenaje";
-  color: rgb(255, 255, 255);
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -141,7 +149,7 @@ main .about .row .text-box p {
   margin: 5px;
 }
 main .about .row .text-box p a {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   -webkit-transition: -webkit-text-decoration 0.3s ease 0s;
   transition: -webkit-text-decoration 0.3s ease 0s;
   transition: text-decoration 0.3s ease 0s;
@@ -152,7 +160,7 @@ main .about .row .text-box p a:hover {
   text-decoration: underline;
 }
 main .location {
-  background-color: #2F375B;
+  background-color: #202733;
 }
 main .location .title-box {
   display: -webkit-box;
@@ -166,8 +174,8 @@ main .location .title-box {
           align-items: center;
 }
 main .location .title-box .title {
-  font-family: "Homenaje";
-  color: #F9F0A4;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
   font-style: normal;
   font-weight: 400;
   font-size: 48px;
@@ -179,7 +187,7 @@ main .location .map {
 }
 
 .footer {
-  background-color: #12172e;
+  background-color: #202733;
   padding: 40px;
 }
 .footer .wrapper {
@@ -193,8 +201,8 @@ main .location .map {
   grid-template-columns: 40% 60%;
 }
 .footer .first-row .text-box__text {
-  font-family: "Homenaje";
-  color: rgb(255, 255, 255);
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
   font-size: 20px;
   line-height: 22px;
 }
@@ -263,8 +271,8 @@ main .location .map {
   font-size: 20px;
   line-height: 22px;
   text-decoration: none;
-  font-family: "Homenaje";
-  color: rgb(255, 255, 255);
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
   -ms-grid-column-align: start;
       justify-self: start;
   -webkit-transition: all 0.3s ease 0s;
@@ -272,6 +280,7 @@ main .location .map {
 }
 .footer .second-row a:hover {
   text-decoration: underline;
+  color: #498fcc;
 }
 
 @media (max-width: 768px) {
@@ -348,15 +357,6 @@ main .location .map {
     -ms-grid-row: 11;
     -ms-grid-column: 3;
   }
-  main .row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-  }
-  main .row .text-box {
-    margin: 15px 0px 0px 0px;
-  }
 }
 @media (max-width: 767px) {
   .header .wrapper::before {
@@ -366,7 +366,7 @@ main .location .map {
     top: 0;
     height: 60px;
     width: 100%;
-    background-color: #2F375B;
+    background-color: #202733;
     z-index: 3;
   }
   .header .menu {
@@ -431,7 +431,7 @@ main .location .map {
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #12172e;
+    background-color: #6b7193;
     padding: 100px 30px 30px 30px;
     -webkit-transition: left 0.3s ease 0s;
     transition: left 0.3s ease 0s;

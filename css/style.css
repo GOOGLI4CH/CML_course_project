@@ -1,6 +1,8 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Homenaje&display=swap&subset=cyrillic-ext");
-@import url("https://fonts.googleapis.com/css2?family=Homenaje&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
 .container {
   max-width: 1024px;
   margin: 0 auto;
@@ -11,18 +13,18 @@ body.lock {
 }
 
 body {
-  background-color: #12172e;
+  background-color: #6b7193;
 }
 
 .header {
-  background-color: #2F375B;
+  background-color: #202733;
   position: fixed;
   width: 100vw;
   left: 0;
   top: 0;
   z-index: 5;
-  -webkit-box-shadow: 0px 5px 1vh rgba(0, 0, 0, 0.568627451);
-          box-shadow: 0px 5px 1vh rgba(0, 0, 0, 0.568627451);
+  -webkit-box-shadow: 0px 15px 20px rgba(29, 37, 39, 0.4);
+          box-shadow: 0px 15px 20px rgba(29, 37, 39, 0.4);
 }
 .header .wrapper {
   margin: 0px 10px;
@@ -52,8 +54,8 @@ body {
       justify-content: space-around;
 }
 .header .wrapper .header__menu .menu__body .menu__list .menu__link {
-  color: rgb(255, 255, 255);
-  font-family: "Homenaje";
+  color: #fff;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
@@ -65,18 +67,22 @@ body {
     font-size: 24px;
   }
 }
+.header .wrapper .header__menu .menu__body .menu__list li:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
 .header .wrapper .header__menu .menu__body .menu__list a:hover {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   text-decoration: underline;
-  color: #F9F0A4;
+  color: #498fcc;
 }
 
 main {
   margin-top: 50px;
 }
 main .slider-box {
-  background-color: #12172e;
+  background-color: #6b7193;
   overflow-x: hidden;
 }
 main .slider-box .wrapper {
@@ -92,23 +98,41 @@ main .slider-box .wrapper {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
 }
-main .slider-box .wrapper .image-slider {
-  width: 100%;
+main .slider-box .wrapper .swiper {
   height: 100%;
-  margin: 30px;
+  width: 100%;
+  padding-bottom: 30px;
+  margin: 30px 0px;
 }
-main .slider-box .wrapper .image-slider .swiper-wrapper .swiper-slide .slide-container {
+main .slider-box .wrapper .swiper .swiper-slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-main .slider-box .wrapper .image-slider .swiper-wrapper .swiper-slide .slide-container img {
-  max-width: 100%;
+main .slider-box .wrapper .swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-box-shadow: 0px 15px 20px rgba(29, 37, 39, 0.4);
+          box-shadow: 0px 15px 20px rgba(29, 37, 39, 0.4);
+}
+main .slider-box .wrapper .swiper .swiper-pagination {
+  bottom: 0;
+}
+main .slider-box .wrapper .swiper .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  line-height: 20px;
+  font-size: 14px;
+  background-color: #ffffff;
 }
 main .slider-box .wrapper .title-box {
   display: -webkit-box;
@@ -119,10 +143,10 @@ main .slider-box .wrapper .title-box {
           justify-content: center;
 }
 main .slider-box .wrapper .title-box .title {
-  font-family: "Homenaje";
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 48px;
-  color: #F9F0A4;
+  color: #fff;
   font-size: 64px;
   line-height: 70px;
   text-transform: uppercase;
@@ -145,40 +169,60 @@ main .slider-box .wrapper .button-box {
       -ms-flex-pack: center;
           justify-content: center;
 }
-main .slider-box .wrapper .button-box .button-box__button {
-  background-color: #f9f0a4;
-  -webkit-transition: background-color 0.3s ease 0s;
-  transition: background-color 0.3s ease 0s;
+main .slider-box .wrapper .button-box__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  outline: none;
 }
-main .slider-box .wrapper .button-box .button-box__button a.button-link {
+main .slider-box .wrapper .button-box__button a {
   display: block;
-  padding: 20px 30px;
-  text-decoration: none;
-  font-family: "Homenaje";
+  padding: 1.3vw 3vw;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
   line-height: 22px;
-  color: rgb(29, 69, 128);
-  -webkit-transition: -webkit-text-decoration 0.3s ease 0s;
-  transition: -webkit-text-decoration 0.3s ease 0s;
-  transition: text-decoration 0.3s ease 0s;
-  transition: text-decoration 0.3s ease 0s, -webkit-text-decoration 0.3s ease 0s;
+  color: #1d4580;
+  color: #000;
+  text-decoration: none;
 }
 @media (max-width: 650px) {
-  main .slider-box .wrapper .button-box .button-box__button a.button-link {
+  main .slider-box .wrapper .button-box__button a {
     font-size: 22px;
     padding: 10px 15px;
   }
 }
-main .slider-box .wrapper .button-box .button-box__button a.button-link:hover {
-  text-decoration: underline;
+main .slider-box .wrapper .button-box__button:hover {
+  background-color: #498fcc;
+  -webkit-box-shadow: 0px 15px 20px rgba(29, 37, 39, 0.4);
+          box-shadow: 0px 15px 20px rgba(29, 37, 39, 0.4);
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
 }
-main .slider-box .wrapper .button-box .button-box__button:hover {
-  background-color: #f4e46d;
+main .slider-box .wrapper .button-box__button:hover a {
+  color: #fff;
+}
+main .slider-box .wrapper .button-box__button:active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
 }
 main .in-cinema {
-  background-color: #2F375B;
+  background-color: #202733;
 }
 main .in-cinema .wrapper {
   display: -webkit-box;
@@ -200,7 +244,7 @@ main .in-cinema .wrapper .card {
   margin-right: 30px;
   width: 450px;
   height: 250px;
-  background-color: #12172e;
+  background-color: #6b7193;
 }
 main .boutique {
   background: url("../img/бутик_кино.png");
@@ -225,19 +269,19 @@ main .boutique .wrapper .title-box {
   margin-top: 50px;
 }
 main .boutique .wrapper .title-box .title {
-  font-family: "Homenaje";
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 64px;
   line-height: 70px;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 main .boutique .wrapper .text-box {
   margin-bottom: 100px;
 }
 main .boutique .wrapper .text-box__text {
-  font-family: "Homenaje";
-  color: rgb(255, 255, 255);
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -254,37 +298,57 @@ main .boutique .wrapper .button-box {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-main .boutique .wrapper .button-box .button-box__button {
-  background-color: #f9f0a4;
-  -webkit-transition: background-color 0.3s ease 0s;
-  transition: background-color 0.3s ease 0s;
+main .boutique .wrapper .button-box__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  outline: none;
 }
-main .boutique .wrapper .button-box .button-box__button a.button-link {
+main .boutique .wrapper .button-box__button a {
   display: block;
-  padding: 20px 30px;
-  text-decoration: none;
-  font-family: "Homenaje";
+  padding: 1.3vw 3vw;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
   line-height: 22px;
-  color: rgb(29, 69, 128);
-  -webkit-transition: -webkit-text-decoration 0.3s ease 0s;
-  transition: -webkit-text-decoration 0.3s ease 0s;
-  transition: text-decoration 0.3s ease 0s;
-  transition: text-decoration 0.3s ease 0s, -webkit-text-decoration 0.3s ease 0s;
+  color: #1d4580;
+  color: #000;
+  text-decoration: none;
 }
 @media (max-width: 650px) {
-  main .boutique .wrapper .button-box .button-box__button a.button-link {
+  main .boutique .wrapper .button-box__button a {
     font-size: 22px;
     padding: 10px 15px;
   }
 }
-main .boutique .wrapper .button-box .button-box__button a.button-link:hover {
-  text-decoration: underline;
+main .boutique .wrapper .button-box__button:hover {
+  background-color: #498fcc;
+  -webkit-box-shadow: 0px 15px 20px rgba(29, 37, 39, 0.4);
+          box-shadow: 0px 15px 20px rgba(29, 37, 39, 0.4);
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
 }
-main .boutique .wrapper .button-box .button-box__button:hover {
-  background-color: #f4e46d;
+main .boutique .wrapper .button-box__button:hover a {
+  color: #fff;
+}
+main .boutique .wrapper .button-box__button:active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
 }
 main .threed {
   background: url("../img/3д_кино.png");
@@ -309,19 +373,19 @@ main .threed .wrapper .title-box {
   margin-top: 50px;
 }
 main .threed .wrapper .title-box .title {
-  font-family: "Homenaje";
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 64px;
   line-height: 70px;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 main .threed .wrapper .text-box {
   margin-bottom: 100px;
 }
 main .threed .wrapper .text-box__text {
-  font-family: "Homenaje";
-  color: rgb(255, 255, 255);
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -338,41 +402,61 @@ main .threed .wrapper .button-box {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-main .threed .wrapper .button-box .button-box__button {
-  background-color: #f9f0a4;
-  -webkit-transition: background-color 0.3s ease 0s;
-  transition: background-color 0.3s ease 0s;
+main .threed .wrapper .button-box__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  outline: none;
 }
-main .threed .wrapper .button-box .button-box__button a.button-link {
+main .threed .wrapper .button-box__button a {
   display: block;
-  padding: 20px 30px;
-  text-decoration: none;
-  font-family: "Homenaje";
+  padding: 1.3vw 3vw;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
   line-height: 22px;
-  color: rgb(29, 69, 128);
-  -webkit-transition: -webkit-text-decoration 0.3s ease 0s;
-  transition: -webkit-text-decoration 0.3s ease 0s;
-  transition: text-decoration 0.3s ease 0s;
-  transition: text-decoration 0.3s ease 0s, -webkit-text-decoration 0.3s ease 0s;
+  color: #1d4580;
+  color: #000;
+  text-decoration: none;
 }
 @media (max-width: 650px) {
-  main .threed .wrapper .button-box .button-box__button a.button-link {
+  main .threed .wrapper .button-box__button a {
     font-size: 22px;
     padding: 10px 15px;
   }
 }
-main .threed .wrapper .button-box .button-box__button a.button-link:hover {
-  text-decoration: underline;
+main .threed .wrapper .button-box__button:hover {
+  background-color: #498fcc;
+  -webkit-box-shadow: 0px 15px 20px rgba(29, 37, 39, 0.4);
+          box-shadow: 0px 15px 20px rgba(29, 37, 39, 0.4);
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
 }
-main .threed .wrapper .button-box .button-box__button:hover {
-  background-color: #f4e46d;
+main .threed .wrapper .button-box__button:hover a {
+  color: #fff;
+}
+main .threed .wrapper .button-box__button:active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
 }
 
 .footer {
-  background-color: #12172e;
+  background-color: #202733;
   padding: 40px;
 }
 .footer .wrapper {
@@ -386,8 +470,8 @@ main .threed .wrapper .button-box .button-box__button:hover {
   grid-template-columns: 40% 60%;
 }
 .footer .first-row .text-box__text {
-  font-family: "Homenaje";
-  color: rgb(255, 255, 255);
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
   font-size: 20px;
   line-height: 22px;
 }
@@ -456,8 +540,8 @@ main .threed .wrapper .button-box .button-box__button:hover {
   font-size: 20px;
   line-height: 22px;
   text-decoration: none;
-  font-family: "Homenaje";
-  color: rgb(255, 255, 255);
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
   -ms-grid-column-align: start;
       justify-self: start;
   -webkit-transition: all 0.3s ease 0s;
@@ -465,6 +549,7 @@ main .threed .wrapper .button-box .button-box__button:hover {
 }
 .footer .second-row a:hover {
   text-decoration: underline;
+  color: #498fcc;
 }
 
 @media (max-width: 768px) {
@@ -550,7 +635,7 @@ main .threed .wrapper .button-box .button-box__button:hover {
     top: 0;
     height: 60px;
     width: 100%;
-    background-color: #2F375B;
+    background-color: #202733;
     z-index: 3;
   }
   .header .menu {
@@ -615,7 +700,7 @@ main .threed .wrapper .button-box .button-box__button:hover {
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #12172e;
+    background-color: #6b7193;
     padding: 100px 30px 30px 30px;
     -webkit-transition: left 0.3s ease 0s;
     transition: left 0.3s ease 0s;

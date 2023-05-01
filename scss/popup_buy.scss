@@ -46,7 +46,7 @@
         }
 
         a:hover {
-            color: $fontColor;
+            color: $hoverColor;
         }
 
         @media (max-width: 680px) {
@@ -73,11 +73,13 @@
 
         .card {
             margin-bottom: 20px;
+            border-radius: 7px;
+            overflow: hidden;
 
             .title-box {
                 padding: 15px;
                 width: 100%;
-                background-color: $secondColor;
+                background-color: $mainColor;
 
                 .title {
                     font-family: $fontFamily;
@@ -93,7 +95,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                background-color: $modalColor;
+                background-color: $secondColor;
                 padding: 20px;
 
                 img {

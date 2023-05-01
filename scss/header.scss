@@ -1,0 +1,57 @@
+@import 'variables.scss';
+
+.header {
+    background-color: $secondColor;
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    box-shadow: $shadow;
+
+    .wrapper {
+        margin: 0px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header__logo {
+            z-index: 5;
+        }
+
+        .header__menu {
+            flex: 1 1 70%;
+
+            .menu__body {
+                .menu__list {
+                    display: flex;
+                    justify-content: space-around;
+
+                    .menu__link {
+                        color: $fontColor;
+                        font-family: $fontFamily;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 22px;
+                        line-height: 22px;
+                        text-decoration: none;
+
+                        @media (max-width:768px) {
+                            font-size: 24px;
+                        }
+                    }
+
+                    li:hover {
+                        transform: translateY(-2px);
+                    }
+
+                    a:hover {
+                        transition: all 0.3s ease 0s;
+                        text-decoration: underline;
+                        color: $hoverColor;
+                    }
+                }
+            }
+        }
+    }
+}

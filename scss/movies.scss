@@ -1,6 +1,6 @@
 @import 'variables.scss';
 
-body{
+body {
     background-color: $mainColor;
 }
 
@@ -20,56 +20,7 @@ body.lock {
     color: $mainWhite;
 }
 
-.header {
-    background-color: $secondColor;
-    position: fixed;
-    width: 100vw;
-    left: 0;
-    top: 0;
-    z-index: 5;
-    box-shadow: 0px 5px 1vh #00000091;
-
-    .wrapper {
-        margin: 0px 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .header__logo {
-            z-index: 5;
-        }
-
-        .header__menu {
-            flex: 1 1 70%;
-
-            .menu__body {
-                .menu__list {
-                    display: flex;
-                    justify-content: space-around;
-
-                    .menu__link {
-                        font-family: $fontFamily;
-                        color: $mainWhite;
-                        font-style: normal;
-                        font-weight: 400;
-                        font-size: 20px;
-                        line-height: 22px;
-                        text-decoration: none;
-                        @media (max-width:768px) {
-                            font-size: 24px;
-                        }
-                    }
-
-                    a:hover {
-                        transition: all 0.3s ease 0s;
-                        text-decoration: underline;
-                        color: $fontColor;
-                   }
-                }
-            }
-        }
-    }
-}
+@import 'header.scss';
 
 main {
     background-color: $mainColor;
@@ -159,7 +110,9 @@ main {
         justify-items: center;
         margin: 0 auto;
         padding-bottom: 20px;
+
         .film {
+            border-radius: 7px;
             background: $secondColor;
             display: grid;
             grid-template-rows: auto 10% auto;
@@ -168,6 +121,7 @@ main {
             width: 282px;
             height: 600px;
             box-shadow: 5px 5px 1vh #00000091;
+            padding: 20px 0px;
 
             h3 {
                 height: auto;
@@ -175,7 +129,7 @@ main {
                 font-size: 32px;
                 line-height: 39px;
                 text-transform: capitalize;
-                color: #fff;
+                color: $fontColor;
                 text-align: center;
             }
 
@@ -183,8 +137,7 @@ main {
                 font-family: $fontFamily;
                 font-size: 24px;
                 line-height: 26px;
-
-                color: #fff;
+                color: $fontColor;
             }
 
             .img_film {
@@ -194,9 +147,6 @@ main {
                 .info {
                     width: 100%;
                     opacity: 0;
-                    .popup__link {
-                        width: 100%;
-                    }
                 }
             }
         }
@@ -205,10 +155,8 @@ main {
 
             opacity: 1;
             background: rgba(0, 0, 0, 0.8);
-
             width: 249px;
             height: 354px;
-
             display: grid;
             grid-template-rows: 75% 10% 15%;
             transition: .5s ease-in-out;
@@ -217,7 +165,6 @@ main {
         .time {
             font-size: 20px;
             line-height: 22px;
-
             justify-self: center;
             align-self: center;
         }
@@ -228,99 +175,56 @@ main {
             line-height: 18px;
         }
 
-        .buy {
-            background: $mainButtonColor;
-            color: $ButtonFontColor;
-            font-size: 40px;
-            line-height: 44px;
-            border: none;
-            text-decoration: none;
+        .button-box {
+            width: 100%;
             text-align: center;
-        }
-    }
-}
+            width: 249px;
 
-.footer {
-    background-color: $secondColor;
-    padding: 40px;
+            &__button {
+                color: #000;
+                background-color: #fff;
+                border: none;
+                border-radius: 7px;
+                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease 0s;
+                outline: none;
 
-    .wrapper {
-        display: grid;
-    }
+                a {
+                    display: block;
+                    padding: 1.3vw 3vw;
+                    font-family: $fontFamily;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 26px;
+                    line-height: 22px;
+                    color: $ButtonFontColor;
+                    color: #000;
+                    text-decoration: none;
 
-    .first-row {
-        display: grid;
-        grid-template-columns: 40% 60%;
-
-        .text-box__text {
-            font-family: $fontFamily;
-            color: $mainWhite;
-            font-size: 20px;
-            line-height: 22px;
-        }
-
-    }
-
-    .second-row {
-        display: grid;
-        grid-template-columns: 5% 45% 5% 45%;
-        grid-template-rows: repeat(3, 1fr);
-        grid-gap: 30px;
-        align-items: center;
-        margin-top: 30px;
-
-        a {
-            font-size: 20px;
-            line-height: 22px;
-            text-decoration: none;
-            font-family: $fontFamily;
-            color: $mainWhite;
-            justify-self: start;
-            transition: all 0.3s ease 0s;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    main {
-        .poster_kino {
-            h1 {
-                font-size: 48px;
+                    @media (max-width:650px) {
+                        font-size: 22px;
+                        padding: 10px 15px;
+                    }
+                }
             }
-        }
-    }
 
-    .footer {
-        .first-row {
-            grid-template-columns: 1fr;
-            grid-template-rows: 30% 70%;
+            &__button:hover {
+                background-color: $hoverColor;
+                box-shadow: $shadow;
+                transform: translateY(-7px);
 
-            .text-box__text {
-                margin-top: 25px;
-                padding-left: 0px;
+                a {
+                    color: #fff;
+                }
             }
-        }
 
-        .second-row {
-            grid-template-columns: 10% 90%;
-            grid-template-rows: repeat(6, 1fr);
-            grid-gap: 10px;
-        }
-    }
-}
-
-@media (max-width: 425px) {
-    main {
-        .poster_kino {
-            h1 {
-                font-size: 32px;
+            &__button:active {
+                transform: translateY(-1px);
             }
         }
     }
 }
 
+@import 'footer.scss';
 @import 'burger.scss';
 @import 'popup_buy.scss';

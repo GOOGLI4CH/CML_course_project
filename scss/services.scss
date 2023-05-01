@@ -9,60 +9,11 @@ body.lock {
     overflow: hidden;
 }
 
-body{
+body {
     background-color: $mainColor;
 }
 
-.header {
-    background-color: $secondColor;
-    position: fixed;
-    width: 100vw;
-    left: 0;
-    top: 0;
-    z-index: 5;
-    box-shadow: 0px 5px 1vh #00000091;
-
-    .wrapper {
-        margin: 0px 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .header__logo {
-            z-index: 5;
-        }
-
-        .header__menu {
-            flex: 1 1 70%;
-
-            .menu__body {
-                .menu__list {
-                    display: flex;
-                    justify-content: space-around;
-
-                    .menu__link {
-                        color: $mainWhite;
-                        font-family: $fontFamily;
-                        font-style: normal;
-                        font-weight: 400;
-                        font-size: 20px;
-                        line-height: 22px;
-                        text-decoration: none;
-                        @media (max-width:768px) {
-                            font-size: 24px;
-                        }
-                    }
-
-                    a:hover {
-                        transition: all 0.3s ease 0s;
-                        text-decoration: underline;
-                        color: $fontColor;
-                   }
-                }
-            }
-        }
-    }
-}
+@import 'header.scss';
 
 main {
     margin-top: 50px;
@@ -96,6 +47,8 @@ main {
 
         .card {
             width: 100%;
+            border-radius: 7px;
+            box-shadow: $shadow;
             background-color: $secondColor;
             margin-bottom: 70px;
             position: relative;
@@ -125,68 +78,5 @@ main {
     }
 }
 
-.footer {
-    background-color: $secondColor;
-    padding: 40px;
-
-    .wrapper {
-        display: grid;
-    }
-
-    .first-row {
-        display: grid;
-        grid-template-columns: 40% 60%;
-
-        .text-box__text {
-            font-family: $fontFamily;
-            color: $mainWhite;
-            font-size: 20px;
-            line-height: 22px;
-        }
-
-    }
-
-    .second-row {
-        display: grid;
-        grid-template-columns: 5% 45% 5% 45%;
-        grid-template-rows: repeat(3, 1fr);
-        grid-gap: 30px;
-        align-items: center;
-        margin-top: 30px;
-
-        a {
-            font-size: 20px;
-            line-height: 22px;
-            text-decoration: none;
-            font-family: $fontFamily;
-            color: $mainWhite;
-            justify-self: start;
-            transition: all 0.3s ease 0s;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .footer {
-        .first-row {
-            grid-template-columns: 1fr;
-            grid-template-rows: 30% 70%;
-
-            .text-box__text {
-                margin-top: 25px;
-                padding-left: 0px;
-            }
-        }
-
-        .second-row {
-            grid-template-columns: 10% 90%;
-            grid-template-rows: repeat(6, 1fr);
-            grid-gap: 10px;
-        }
-    }
-}
-
+@import 'footer.scss';
 @import 'burger.scss';
