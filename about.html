@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="icons/pages_logo/about-us.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/nullstyle.css">
     <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <title>О кинотеатре</title>
 </head>
 
@@ -22,10 +23,9 @@
                     </div>
                     <nav class="menu__body">
                         <ul class="menu__list">
-                            <li><a href="" class="menu__link">Прайс</a></li>
                             <li><a href="about.html" class="menu__link">О кинотеатре</a></li>
                             <li><a href="services.html" class="menu__link">Услуги</a></li>
-                            <li><a href="" class="menu__link">Контакты</a></li>
+                            <li><a href="#contacts" class="menu__link">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -39,7 +39,9 @@
                     <h1 class="title">О кинотеатре</h1>
                 </div>
                 <div class="row">
-                    <img src="img/cinema.jpg" alt="">
+                    <div class="row__img">
+                        <img src="img/cinema.jpg" alt="">
+                    </div>
                     <div class="text-box">
                         <p>
                             Добро пожаловать в сеть кинотеатров! Мы являемся одним из ведущих операторов кинотеатров,
@@ -54,7 +56,7 @@
                             зрителям
                             наслаждаться кино в наилучшем качестве.</p>
                         <p>Директор: Стасик Розель <br>
-                            <a href="tel:+375298011905">Номер телефона: +375 (29) 801-19-05</a>
+                            Номер телефона: <a href="tel:+375298011905">+375 (29) 801-19-05</a>
                         </p>
                     </div>
                 </div>
@@ -68,6 +70,34 @@
                 <div class="map">
                     <script type="text/javascript" charset="utf-8" async
                         src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2d643ad59b0f7fd92b315db4297b28165734ba4b051f867102820b66441be57c&amp;width=100%25&amp;height=388&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
+            </div>
+        </div>
+        <div class="halls">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="title-box">
+                        <h1 class="title">Наши залы</h1>
+                    </div>
+                    <div class="swiper halls-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slide-container">
+                                    <img src="img/hall1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-container">
+                                    <img src="img/hall2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-container">
+                                    <img src="img/hall3.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -86,7 +116,7 @@
                     </div>
 
                 </div>
-                <div class="second-row">
+                <div class="second-row" id="contacts">
                     <a href="https://t.me/googlich"><img src="icons/tg.svg" alt=""></a>
                     <a href="https://t.me/googlich">Мы в Telegram</a>
                     <a href=""><img src="icons/facebook.svg" alt=""></a>
@@ -103,7 +133,9 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/swiper.js"></script>
 </body>
 
 </html>

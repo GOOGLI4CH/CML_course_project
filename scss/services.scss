@@ -10,14 +10,15 @@ body.lock {
 }
 
 body {
-    background-color: $mainColor;
+    background: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @import 'header.scss';
 
 main {
     margin-top: 50px;
-    background-color: $mainColor;
 
     .wrapper {
         display: flex;

@@ -19,11 +19,11 @@ main {
     margin-top: 50px;
 
     .slider-box {
-        background-color: $mainColor;
+        background: url('../img/background.jpg');
         overflow-x: hidden;
 
         .wrapper {
-            padding: 40px;
+            padding: 30px;
             display: flex;
             justify-content: center;
             flex-flow: column nowrap;
@@ -39,12 +39,19 @@ main {
                     justify-content: center;
                     align-items: center;
 
-                    img {
-                        display: block;
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
+                    .slide-container {
+                        padding: 5px;
+                        border-radius: 8px;
+                        background-color: $secondColor;
                         box-shadow: $shadow;
+
+                        img {
+                            border-radius: 4px;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
                     }
                 }
 
@@ -144,25 +151,111 @@ main {
 
     .in-cinema {
         background-color: $secondColor;
+        padding: 30px;
 
-        .wrapper {
+        .title-box {
             display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            align-items: center;
-            padding: 40px;
+            justify-content: center;
+            margin-bottom: 20px;
 
-            .card {
-                margin-right: 30px;
-                width: 450px;
-                height: 250px;
-                background-color: $mainColor;
+            .title {
+                font-family: $fontFamily;
+                font-weight: 400;
+                font-size: 48px;
+                color: $fontColor;
+                font-size: 64px;
+                line-height: 70px;
+                text-transform: uppercase;
+            }
+
+            @media (max-width: 830px) {
+                .title {
+                    font-size: 30px;
+                }
+            }
+
+            @media (max-width: 450px) {
+                .title {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .header-info {
+            background-color: $hoverColor;
+            border-radius: 7px;
+            margin-bottom: 10px;
+            
+
+            .list {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px;
+                flex-flow: row nowrap;
+                @media (max-width:500px) {
+                    flex-flow: column nowrap;
+                }
+
+                li {
+                    font-family: $fontFamily;
+                    color: $fontColor;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    @media (max-width:680px) {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+        }
+
+        .swiper {
+            width: 100%;
+            height: 200px;
+            padding: 0px 30px;
+            .swiper-wrapper {
+
+                .swiper-slide {
+
+                    .ticket {
+                        background-color: $mainColor;
+                        border-radius: 7px;
+
+                        &__list {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 20px;
+                            flex-flow: row nowrap;
+                            @media (max-width:500px) {
+                                flex-flow: column nowrap;
+                            }
+
+                            li {
+                                font-family: $fontFamily;
+                                color: $fontColor;
+                                font-size: 24px;
+                                font-style: normal;
+                                font-weight: 400;
+                                @media (max-width:680px) {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .swiper-scrollbar {
+                background-color: $hoverColor;
+                right: 0px;
             }
         }
     }
 
     .boutique {
-        background: url('../img/бутик_кино.png');
+        background: url('../img/boutique_film.png');
         background-repeat: no-repeat;
         background-size: cover;
 
@@ -257,7 +350,7 @@ main {
     }
 
     .threed {
-        background: url('../img/3д_кино.png');
+        background: url('../img/3d_film.png');
         background-repeat: no-repeat;
         background-size: cover;
 

@@ -1,7 +1,9 @@
 @import 'variables.scss';
 
 body {
-    background-color: $mainColor;
+    background: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body.lock {
@@ -13,91 +15,39 @@ body.lock {
     margin: 0 auto;
 }
 
-.title {
-    font-family: $fontFamily;
-    font-weight: 400;
-    font-size: 48px;
-    color: $mainWhite;
-}
-
 @import 'header.scss';
 
 main {
-    background-color: $mainColor;
-    margin-top: 30px;
 
     .poster_kino {
-        h1 {
-            width: 100%;
-            height: 75px;
-            text-align: center;
-            padding: 50px 0px;
-            font-family: $fontFamily;
-            font-size: 64px;
-            line-height: 70px;
-            text-transform: uppercase;
-            color: $fontColor;
-            margin-bottom: 30px;
-        }
+        margin-top: 85px;
 
-        .options {
-            width: 80%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
-            grid-gap: 65px;
-            justify-items: center;
-            margin: 0 auto;
-            margin-bottom: 40px;
+        .title-box {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+                .title {
+                    font-family: $fontFamily;
+                    font-weight: 400;
+                    font-size: 48px;
+                    color: $fontColor;
+                    font-size: 64px;
+                    line-height: 70px;
+                    text-transform: uppercase;
+                }
 
-            .date,
-            .session,
-            .genres {
+                @media (max-width: 830px) {
+                    .title {
+                        font-size: 30px;
+                    }
+                }
 
-                height: 53px;
-                background: rgba(29, 69, 128, .25);
-                border: none;
-                cursor: pointer;
-                font-family: $fontFamily;
-                font-size: 24px;
-                line-height: 26px;
-                text-transform: capitalize;
-                color: $mainWhite;
-                outline: none;
+                @media (max-width: 450px) {
+                    .title {
+                        font-size: 24px;
+                    }
+                }
             }
-
-            .session,
-            .genres {
-                width: 282px;
-            }
-        }
-
-        .select {
-            background: url('../icons/calendar.svg') no-repeat;
-            background-position: right center;
-        }
-
-        .select2 {
-            background: url('../icons/calendar.svg') no-repeat;
-            background-position: right center;
-        }
-
-        .session,
-        .genres {
-            overflow: hidden;
-            padding-left: 40px;
-        }
-
-        .date {
-            width: 282px;
-            padding-left: 40px;
-        }
-
-        .date::-webkit-calendar-picker-indicator {
-            color: transparent;
-            opacity: 1;
-            background: url('../icons/calendar.svg');
-            background-size: contain;
-        }
     }
 
     .films {

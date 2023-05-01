@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
 body {
   background-color: #6b7193;
+  font-family: "Raleway", sans-serif;
 }
 
 .container {
@@ -100,7 +101,6 @@ main .about .title-box {
   margin-bottom: 30px;
 }
 main .about .title-box .title {
-  font-family: "Raleway", sans-serif;
   color: #fff;
   font-style: normal;
   font-weight: 400;
@@ -115,7 +115,7 @@ main .about .title-box .title {
 }
 @media (max-width: 480px) {
   main .about .title-box .title {
-    font-size: 38px;
+    font-size: 34px;
   }
 }
 main .about .row {
@@ -124,13 +124,29 @@ main .about .row {
   display: -ms-flexbox;
   display: flex;
 }
-main .about .row img {
-  max-width: 100%;
+@media (max-width: 1024px) {
+  main .about .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+}
+main .about .row .row__img {
+  padding: 4px;
+  background-color: #202733;
+  border-radius: 8px;
   -webkit-box-shadow: 0px 15px 20px rgba(29, 37, 39, 0.4);
           box-shadow: 0px 15px 20px rgba(29, 37, 39, 0.4);
 }
+main .about .row .row__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
 main .about .row .text-box {
-  margin-left: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,9 +154,14 @@ main .about .row .text-box {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+  margin-left: 30px;
+}
+@media (max-width: 1024px) {
+  main .about .row .text-box {
+    margin-left: 0px;
+  }
 }
 main .about .row .text-box p {
-  font-family: "Raleway", sans-serif;
   color: #ffffff;
   font-style: normal;
   font-weight: 400;
@@ -158,9 +179,11 @@ main .about .row .text-box p a {
 }
 main .about .row .text-box p a:hover {
   text-decoration: underline;
+  color: #498fcc;
 }
 main .location {
   background-color: #202733;
+  padding: 30px;
 }
 main .location .title-box {
   display: -webkit-box;
@@ -174,16 +197,95 @@ main .location .title-box {
           align-items: center;
 }
 main .location .title-box .title {
-  font-family: "Raleway", sans-serif;
   color: #fff;
   font-style: normal;
   font-weight: 400;
-  font-size: 48px;
+  font-size: 64px;
   line-height: 70px;
   text-transform: uppercase;
 }
+@media (max-width: 560px) {
+  main .location .title-box .title {
+    font-size: 48px;
+  }
+}
+@media (max-width: 480px) {
+  main .location .title-box .title {
+    font-size: 34px;
+  }
+}
 main .location .map {
+  padding: 30px 0px;
+}
+main .halls {
+  background-color: #6b7193;
   padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  overflow: hidden;
+}
+main .halls .title-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .halls .title-box .title {
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 70px;
+  text-transform: uppercase;
+}
+@media (max-width: 560px) {
+  main .halls .title-box .title {
+    font-size: 48px;
+  }
+}
+@media (max-width: 480px) {
+  main .halls .title-box .title {
+    font-size: 34px;
+  }
+}
+main .halls .swiper {
+  margin: 20px 0px;
+  height: 100%;
+  width: 100%;
+}
+main .halls .swiper .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .halls .swiper .swiper-slide .slide-container {
+  padding: 5px;
+  border-radius: 8px;
+  background-color: #202733;
+}
+main .halls .swiper .swiper-slide .slide-container img {
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .footer {
