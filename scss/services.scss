@@ -23,6 +23,7 @@ main {
     .wrapper {
         display: flex;
         flex-flow: column nowrap;
+        margin: 0px 20px;
 
         .title-box {
             padding: 50px;
@@ -85,4 +86,3 @@ main {
 }
 
 @import 'footer.scss';
-@import 'burger.scss';

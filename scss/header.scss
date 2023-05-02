@@ -1,5 +1,70 @@
 @import 'variables.scss';
 
+body.pc {
+    .header {
+        .header__menu {
+            .menu__list {
+                li:hover {
+                    .menu__sub-list {
+                        opacity: 1;
+                        visibility: visible;
+                        pointer-events: all;
+                    }
+                }
+            }
+        }
+    }
+}
+
+body.mobile {
+    .header {
+        .header__menu {
+            .menu__list {
+                li.active {
+                    .menu__sub-list {
+                        opacity: 1;
+                        visibility: visible;
+                        pointer-events: all;
+                        transform: translate(0px, 10px);
+                    }
+                    .menu__arrow {
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+body.mobile {
+    .header {
+        .header__menu {
+            .menu__body {
+                .menu__list {
+                    li {
+                        display: flex;
+                        align-items: center;
+
+                        .menu__link {
+                            flex: 1 1 auto;
+                        }
+                    }
+                    .menu__arrow {
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        margin-left: 5px;
+                        transition: transform 0.3s ease 0s;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        border-top: 10px solid $fontColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .header {
     background-color: $mainColor;
     position: fixed;
@@ -27,22 +92,26 @@
                     display: flex;
                     justify-content: space-around;
 
-                    .menu__link {
-                        color: $fontColor;
-                        font-family: $fontFamily;
-                        font-style: normal;
-                        font-weight: 400;
-                        font-size: 22px;
-                        line-height: 22px;
-                        text-decoration: none;
+                    li {
+                        position: relative;
 
-                        @media (max-width:768px) {
-                            font-size: 24px;
+                        .menu__link {
+                            color: $fontColor;
+                            font-family: $fontFamily;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 22px;
+                            line-height: 22px;
+                            text-decoration: none;
+
+                            @media (max-width:768px) {
+                                font-size: 24px;
+                            }
                         }
                     }
 
                     li:hover {
-                        transform: translateY(-2px);
+                        transform: translateY(-1px);
                     }
 
                     a:hover {
@@ -50,8 +119,51 @@
                         text-decoration: underline;
                         color: $hoverColor;
                     }
+
+                    .menu__arrow {
+                        display: none;
+                    }
+
+                    .menu__sub-list {
+                        min-width: 12vw;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        background-color: $popupColor;
+                        padding: 0px 20px;
+                        border-radius: 5px;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        align-items: flex-start;
+                        opacity: 0;
+                        visibility: hidden;
+                        pointer-events: none;
+                        transition: all 0.3s ease 0s;
+
+                        li {
+                            margin: 10px 0px;
+
+                            a {
+                                color: $fontColor;
+                                font-family: $fontFamily;
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 20px;
+                                line-height: 22px;
+                                text-decoration: none;
+                            }
+
+                            a:hover {
+                                transition: all 0.3s ease 0s;
+                                text-decoration: underline;
+                                color: $hoverColor;
+                            }
+                        }
+                    }
                 }
             }
         }
     }
 }
+
+@import 'burger.scss';

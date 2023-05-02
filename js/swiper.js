@@ -51,6 +51,7 @@ let aboutSwiper = new Swiper(".halls-swiper", {
     freeMode: true,
     slidesPerView: "auto",
     loop: true,
+    mousewheel: true,
     keyboard: {
         enabled: true,
     },

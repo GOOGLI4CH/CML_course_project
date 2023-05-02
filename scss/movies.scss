@@ -147,7 +147,7 @@ main {
                     font-weight: 400;
                     font-size: 26px;
                     line-height: 22px;
-                    color: $ButtonFontColor;
+                    color: $mainWhite;
                     color: #000;
                     text-decoration: none;
 
@@ -176,5 +176,4 @@ main {
 }
 
 @import 'footer.scss';
-@import 'burger.scss';
 @import 'popup_buy.scss';
