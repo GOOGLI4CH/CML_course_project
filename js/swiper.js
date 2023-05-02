@@ -25,22 +25,38 @@ let swiper = new Swiper(".scroll-container", {
     spaceBetween: 10,
     autoHeight: true,
     freeMode: true,
+    effect: "coverflow",
+    coverflowEffect: {
+        rotate: -5,
+        stretch: 1,
+        depth: 10,
+        modifier: 1,
+        slideShadows: true,
+    },
+    keyboard: {
+        enabled: true,
+    },
     scrollbar: {
-      el: ".swiper-scrollbar",
+        el: ".swiper-scrollbar",
+        draggable: true,
     },
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
     },
     mousewheel: true,
-  });
+});
 
 let aboutSwiper = new Swiper(".halls-swiper", {
     freeMode: true,
+    slidesPerView: "auto",
     loop: true,
-    effect: "fade",
     keyboard: {
         enabled: true,
+    },
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true,
     },
     autoplay: {
         delay: 2500,

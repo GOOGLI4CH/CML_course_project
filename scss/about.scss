@@ -1,7 +1,9 @@
 @import 'variables.scss';
 
 body {
-    background-color: $mainColor;
+    background: url('../img/background.jpg') -10px -10px;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: $fontFamily;
 }
 
@@ -14,7 +16,6 @@ body {
 
 main {
     margin-top: 60px;
-    background-color: $mainColor;
 
     .about {
         display: flex;
@@ -55,16 +56,16 @@ main {
             }
 
             .row__img {
-                padding: 4px;
-                background-color: $secondColor;
-                border-radius: 8px;
+                padding: 2px;
+                background-color: $mainColor;
+                border-radius: 5px;
                 box-shadow: $shadow;
 
                 img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    border-radius: 5px;
+                    border-radius: 3px;
                 }
             }
 
@@ -72,9 +73,13 @@ main {
                 display: flex;
                 flex-flow: column nowrap;
                 margin-left: 30px;
+                padding: 5px;
+                border-radius: 5px;
+                background-color: #00000087;
 
                 @media (max-width:1024px) {
                     margin-left: 0px;
+                    margin-top: 10px;
                 }
 
                 p {
@@ -101,7 +106,7 @@ main {
     }
 
     .location {
-        background-color: $secondColor;
+        background-color: $mainColor;
         padding: 30px;
 
         .title-box {
@@ -133,63 +138,141 @@ main {
     }
 
     .halls {
-        background-color: $mainColor;
-        padding: 30px;
-        display: flex;
-        flex-flow: column nowrap;
-        overflow: hidden;
-
-        .title-box {
+        .wrapper {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-flow: column nowrap;
+            overflow: hidden;
+            margin: 0px 20px;
 
-            .title {
-                color: $fontColor;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 64px;
-                line-height: 70px;
-                text-transform: uppercase;
-
-                @media (max-width: 560px) {
-                    font-size: 48px;
-                }
-
-                @media (max-width: 480px) {
-                    font-size: 34px;
-                }
-            }
-        }
-
-        .swiper {
-            margin: 20px 0px;
-            height: 100%;
-            width: 100%;
-
-            .swiper-slide {
+            .title-box {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                margin: 20px 0px;
 
-                .slide-container {
-                    padding: 5px;
-                    border-radius: 8px;
-                    background-color: $secondColor;
+                .title {
+                    color: $fontColor;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 64px;
+                    line-height: 70px;
+                    text-transform: uppercase;
 
-                    img {
-                        border-radius: 4px;
-                        display: block;
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
+                    @media (max-width: 560px) {
+                        font-size: 48px;
                     }
+
+                    @media (max-width: 480px) {
+                        font-size: 34px;
+                    }
+                }
+            }
+
+            .swiper {
+                width: 100%;
+                box-shadow: $shadow;
+                margin-bottom: 30px;
+                border-radius: 8px;
+                background-color: $mainColor;
+
+                .swiper-wrapper {
+
+                    .swiper-slide {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+
+                        .slide-container {
+                            padding: 20px;
+
+                            .title-box {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                .title {
+                                    color: $fontColor;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 40px;
+                                    line-height: 70px;
+                                    text-transform: uppercase;
+
+                                    @media (max-width: 620px) {
+                                        font-size: 30px;
+                                    }
+
+                                    @media (max-width: 485px) {
+                                        font-size: 25px;
+                                    }
+                                }
+                            }
+
+                            .content-box {
+                                display: flex;
+                                align-items: center;
+                                flex-flow: row nowrap;
+                                height: 100%;
+                                width: 100%;
+
+                                .img-container {
+                                    flex: 1 1 40%;
+
+                                    img {
+                                        border-radius: 5px;
+                                        max-width: 100%;
+                                        max-height: 100%;
+                                        object-fit: contain;
+                                        object-position: center;
+                                    }
+                                }
+
+                                .text-box {
+                                    flex: 1 1 60%;
+                                    margin-left: 30px;
+                                    display: flex;
+                                    align-items: center;
+                                    flex-flow: column nowrap;
+
+                                    .text {
+                                        p {
+                                            color: $mainWhite;
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 20px;
+                                            line-height: 22px;
+                                            margin: 5px;
+                                        }
+
+                                        @media (max-width:870px) {
+                                            p:nth-child(2n + 1) {
+                                                display: none
+                                            }
+                                        }
+                                    }
+                                }
+
+                                @media (max-width: 680px) {
+                                    flex-flow: column nowrap;
+
+                                    .text-box {
+                                        margin: 0px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .swiper-scrollbar {
+                    background-color: $hoverColor;
+                    cursor: pointer;
                 }
             }
         }
     }
 }
-
 
 @import 'footer.scss';
 @import 'burger.scss';

@@ -28,41 +28,48 @@
 
     &__title {
         position: relative;
-        font-family: $fontFamily;
-        font-size: 32px;
         text-transform: uppercase;
-        color: $fontColor;
         display: flex;
         justify-content: center;
+
+        h1 {
+            font-family: $fontFamily;
+            font-weight: 400;
+            font-size: 48px;
+            color: $fontColor;
+            font-size: 64px;
+            line-height: 70px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 580px) {
+            h1 {
+                font-size: 40px;
+            }
+        }
+        @media (max-width: 340px) {
+            h1 {
+                font-size: 30px;
+            }
+        }
 
         a {
             color: $mainWhite;
             text-decoration: none;
             position: absolute;
-            right: 10px;
-            top: 30px;
+            right: 0px;
+            top: 10px;
             font-size: 34px;
             transition: color 0.3s ease 0s;
+    
+            @media (max-width: 480px) {
+                top: 15px;
+                font-size: 24px;
+            }
         }
 
         a:hover {
             color: $hoverColor;
-        }
-
-        @media (max-width: 680px) {
-            font-size: 30px;
-
-            a {
-                top: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            font-size: 20px;
-
-            a {
-                top: 10px;
-            }
         }
     }
 
@@ -95,7 +102,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                background-color: $secondColor;
+                background-color: $mainColor;
                 padding: 20px;
 
                 img {
@@ -121,6 +128,12 @@
                     @media (max-width: 380px) {
                         margin-left: 15px;
                         font-size: 16px;
+                    }
+
+                    @media (max-width: 670px) {
+                        span {
+                            display: none;
+                        }
                     }
                 }
             }

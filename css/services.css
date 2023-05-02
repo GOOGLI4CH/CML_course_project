@@ -1,4 +1,6 @@
-@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
 .container {
   max-width: 1024px;
@@ -10,7 +12,7 @@ body.lock {
 }
 
 body {
-  background: url("../img/background.jpg");
+  background: url("../img/background.jpg") -10px -10px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -139,6 +141,12 @@ main .wrapper .card p {
   main .wrapper .card p {
     font-size: 20px;
   }
+}
+main .wrapper .card:hover {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .footer {
@@ -386,7 +394,7 @@ main .wrapper .card p {
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #6b7193;
+    background-color: #202733;
     padding: 100px 30px 30px 30px;
     -webkit-transition: left 0.3s ease 0s;
     transition: left 0.3s ease 0s;

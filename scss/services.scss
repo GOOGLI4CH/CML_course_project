@@ -10,7 +10,7 @@ body.lock {
 }
 
 body {
-    background: url('../img/background.jpg');
+    background: url('../img/background.jpg') -10px -10px;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -50,7 +50,7 @@ main {
             width: 100%;
             border-radius: 7px;
             box-shadow: $shadow;
-            background-color: $secondColor;
+            background-color: $mainColor;
             margin-bottom: 70px;
             position: relative;
 
@@ -75,6 +75,11 @@ main {
                     font-size: 20px;
                 }
             }
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            transition: all 0.3s ease 0s;
         }
     }
 }

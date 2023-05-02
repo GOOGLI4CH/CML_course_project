@@ -1,7 +1,7 @@
 @import 'variables.scss';
 
 body {
-    background: url('../img/background.jpg');
+    background: url('../img/background.jpg') -10px -10px;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -63,7 +63,7 @@ main {
 
         .film {
             border-radius: 7px;
-            background: $secondColor;
+            background: $mainColor;
             display: grid;
             grid-template-rows: auto 10% auto;
             justify-items: center;

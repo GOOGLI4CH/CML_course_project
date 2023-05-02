@@ -12,7 +12,7 @@ body.lock {
 }
 
 body {
-  background-color: #6b7193;
+  background-color: #202733;
 }
 
 .header {
@@ -81,7 +81,7 @@ main {
   margin-top: 50px;
 }
 main .slider-box {
-  background: url("../img/background.jpg");
+  background: url("../img/background.jpg") -10px -10px;
   overflow-x: hidden;
 }
 main .slider-box .wrapper {
@@ -115,19 +115,22 @@ main .slider-box .wrapper .swiper .swiper-slide {
           align-items: center;
 }
 main .slider-box .wrapper .swiper .swiper-slide .slide-container {
-  padding: 5px;
-  border-radius: 8px;
+  padding: 2px;
+  border-radius: 5px;
   background-color: #202733;
   -webkit-box-shadow: 0px 15px 20px rgba(29, 37, 39, 0.4);
           box-shadow: 0px 15px 20px rgba(29, 37, 39, 0.4);
 }
 main .slider-box .wrapper .swiper .swiper-slide .slide-container img {
-  border-radius: 4px;
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  border-radius: 3px;
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 main .slider-box .wrapper .swiper .swiper-pagination {
   bottom: 0;
@@ -140,12 +143,16 @@ main .slider-box .wrapper .swiper .swiper-pagination-bullet {
   background-color: #ffffff;
 }
 main .slider-box .wrapper .title-box {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 main .slider-box .wrapper .title-box .title {
   font-family: "Raleway", sans-serif;
@@ -347,6 +354,7 @@ main .in-cinema .swiper .swiper-wrapper .swiper-slide .ticket__list li {
 main .in-cinema .swiper .swiper-scrollbar {
   background-color: #498fcc;
   right: 0px;
+  cursor: pointer;
 }
 main .boutique {
   background: url("../img/boutique_film.png");
@@ -367,8 +375,8 @@ main .boutique .wrapper {
   padding: 15px;
 }
 main .boutique .wrapper .title-box {
-  margin-bottom: 100px;
-  margin-top: 50px;
+  margin-bottom: 15vh;
+  margin-top: 7.5vh;
 }
 main .boutique .wrapper .title-box .title {
   font-family: "Raleway", sans-serif;
@@ -379,7 +387,10 @@ main .boutique .wrapper .title-box .title {
   color: #ffffff;
 }
 main .boutique .wrapper .text-box {
-  margin-bottom: 100px;
+  margin-bottom: 15vh;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.7647058824);
 }
 main .boutique .wrapper .text-box__text {
   font-family: "Raleway", sans-serif;
@@ -391,6 +402,9 @@ main .boutique .wrapper .text-box__text {
 }
 main .boutique .wrapper .text-box__text p {
   margin-bottom: 15px;
+}
+main .boutique .wrapper .text-box__text p:last-child {
+  margin-bottom: 0;
 }
 main .boutique .wrapper .button-box {
   display: -webkit-box;
@@ -471,8 +485,8 @@ main .threed .wrapper {
   padding: 15px;
 }
 main .threed .wrapper .title-box {
-  margin-bottom: 100px;
-  margin-top: 50px;
+  margin-bottom: 15vh;
+  margin-top: 7.5vh;
 }
 main .threed .wrapper .title-box .title {
   font-family: "Raleway", sans-serif;
@@ -483,7 +497,10 @@ main .threed .wrapper .title-box .title {
   color: #ffffff;
 }
 main .threed .wrapper .text-box {
-  margin-bottom: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.7647058824);
+  margin-bottom: 15vh;
 }
 main .threed .wrapper .text-box__text {
   font-family: "Raleway", sans-serif;
@@ -495,6 +512,9 @@ main .threed .wrapper .text-box__text {
 }
 main .threed .wrapper .text-box__text p {
   margin-bottom: 15px;
+}
+main .threed .wrapper .text-box__text p:last-child {
+  margin-bottom: 0;
 }
 main .threed .wrapper .button-box {
   display: -webkit-box;
@@ -802,7 +822,7 @@ main .threed .wrapper .button-box__button:active {
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #6b7193;
+    background-color: #202733;
     padding: 100px 30px 30px 30px;
     -webkit-transition: left 0.3s ease 0s;
     transition: left 0.3s ease 0s;

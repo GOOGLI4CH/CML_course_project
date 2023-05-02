@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
 body {
-  background: url("../img/background.jpg");
+  background: url("../img/background.jpg") -10px -10px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -485,7 +485,7 @@ main .films .button-box__button:active {
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #6b7193;
+    background-color: #202733;
     padding: 100px 30px 30px 30px;
     -webkit-transition: left 0.3s ease 0s;
     transition: left 0.3s ease 0s;
@@ -536,16 +536,13 @@ main .films .button-box__button:active {
   padding: 30px 50px;
 }
 .popup__content {
-  background-color: #6b7193;
+  background-color: #202733;
   max-width: 1024px;
   padding: 30px;
 }
 .popup__title {
   position: relative;
-  font-family: "Raleway", sans-serif;
-  font-size: 32px;
   text-transform: uppercase;
-  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -553,34 +550,43 @@ main .films .button-box__button:active {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.popup__title h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  color: #fff;
+  font-size: 64px;
+  line-height: 70px;
+  text-transform: uppercase;
+}
+@media (max-width: 580px) {
+  .popup__title h1 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 340px) {
+  .popup__title h1 {
+    font-size: 30px;
+  }
+}
 .popup__title a {
   color: #ffffff;
   text-decoration: none;
   position: absolute;
-  right: 10px;
-  top: 30px;
+  right: 0px;
+  top: 10px;
   font-size: 34px;
   -webkit-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
+@media (max-width: 480px) {
+  .popup__title a {
+    top: 15px;
+    font-size: 24px;
+  }
+}
 .popup__title a:hover {
   color: #498fcc;
-}
-@media (max-width: 680px) {
-  .popup__title {
-    font-size: 30px;
-  }
-  .popup__title a {
-    top: 20px;
-  }
-}
-@media (max-width: 480px) {
-  .popup__title {
-    font-size: 20px;
-  }
-  .popup__title a {
-    top: 10px;
-  }
 }
 .popup__text {
   display: -webkit-box;
@@ -602,7 +608,7 @@ main .films .button-box__button:active {
 .popup__text .card .title-box {
   padding: 15px;
   width: 100%;
-  background-color: #6b7193;
+  background-color: #202733;
 }
 .popup__text .card .title-box .title {
   font-family: "Raleway", sans-serif;
@@ -649,6 +655,11 @@ main .films .button-box__button:active {
   .popup__text .card .content-box p {
     margin-left: 15px;
     font-size: 16px;
+  }
+}
+@media (max-width: 670px) {
+  .popup__text .card .content-box p span {
+    display: none;
   }
 }
 
