@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
 .container {
   max-width: 1024px;
   margin: 0 auto;
@@ -110,10 +113,6 @@ body.mobile .header .header__menu .menu__body .menu__list .menu__arrow {
   .header .wrapper .header__menu .menu__body .menu__list li .menu__link {
     font-size: 24px;
   }
-}
-.header .wrapper .header__menu .menu__body .menu__list li:hover {
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
 }
 .header .wrapper .header__menu .menu__body .menu__list a:hover {
   -webkit-transition: all 0.3s ease 0s;

@@ -1,4 +1,4 @@
-let mainSwiper = new Swiper(".swiper-container", {
+let mainSlider = new Swiper(".swiper-container", {
     slidesPerView: 3,
     spaceBetween: 30,
     freeMode: true,
@@ -19,7 +19,7 @@ let mainSwiper = new Swiper(".swiper-container", {
     },
 });
 
-let swiper = new Swiper(".scroll-container", {
+let ticketSlider = new Swiper(".scroll-container", {
     direction: "vertical",
     slidesPerView: "auto",
     spaceBetween: 10,
@@ -47,7 +47,7 @@ let swiper = new Swiper(".scroll-container", {
     mousewheel: true,
 });
 
-let aboutSwiper = new Swiper(".halls-swiper", {
+let aboutSlider = new Swiper(".halls-swiper", {
     freeMode: true,
     slidesPerView: "auto",
     loop: true,
