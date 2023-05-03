@@ -269,6 +269,8 @@ main {
 }
 main .slider-box {
   background: url("../img/background.jpg") -10px -10px;
+  background-size: cover;
+  background-repeat: no-repeat;
   overflow-x: hidden;
 }
 main .slider-box .wrapper {
