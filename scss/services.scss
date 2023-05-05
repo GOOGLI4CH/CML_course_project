@@ -1,18 +1,10 @@
-@import 'variables.scss';
-
-.container {
-    max-width: 1024px;
-    margin: 0 auto;
-}
-
-body.lock {
-    overflow: hidden;
-}
+@import 'common.scss';
 
 body {
-    background: url('../img/background.jpg') -10px -10px;
+    background: url('../img/background.jpg') 0 0;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: $fontFamily;
 }
 
 @import 'header.scss';

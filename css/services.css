@@ -2,19 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
-.container {
-  max-width: 1024px;
-  margin: 0 auto;
-}
-
-body.lock {
-  overflow: hidden;
-}
-
 body {
-  background: url("../img/background.jpg") -10px -10px;
+  background: url("../img/background.jpg") 0 0;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: "Raleway", sans-serif;
 }
 
 body.pc .header .header__menu .menu__list li:hover .menu__sub-list {
@@ -166,6 +158,10 @@ body.mobile .header .header__menu .menu__body .menu__list .menu__arrow {
   transition: all 0.3s ease 0s;
   text-decoration: underline;
   color: #498fcc;
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 @media (max-width: 767px) {

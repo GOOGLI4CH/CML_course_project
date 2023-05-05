@@ -1,4 +1,8 @@
-@import 'variables.scss';
+@import 'common.scss';
+
+body.lock {
+    overflow: hidden;
+}
 
 @media (max-width: 767px) {
     .header {

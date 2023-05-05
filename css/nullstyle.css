@@ -9,6 +9,11 @@ ol[class] {
   padding: 0;
 }
 
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 body,
 h1,
 h2,
