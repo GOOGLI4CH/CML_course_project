@@ -1,268 +1,227 @@
 @import 'common.scss';
 
 body {
-    background: url('../img/background.jpg') 0 0;
-    background-repeat: no-repeat;
-    background-size: cover;
     font-family: $fontFamily;
+    background-color: $mainColor
 }
 
 @import 'header.scss';
 
+.title-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+        color: $fontColor;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 70px;
+        text-transform: uppercase;
+
+        @media (max-width: 560px) {
+            font-size: 48px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 34px;
+        }
+    }
+}
+
 main {
     margin-top: 60px;
 
-    .about {
-        display: flex;
-        flex-flow: column nowrap;
-        padding: 30px;
+    .about-section {
+        background: url('../img/background.jpg');
+        background-size: cover;
 
-        .title-box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 30px;
-
-            .title {
-                color: $fontColor;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 64px;
-                line-height: 70px;
-                text-transform: uppercase;
-
-                @media (max-width: 560px) {
-                    font-size: 48px;
-                }
-
-                @media (max-width: 480px) {
-                    font-size: 34px;
-                }
-
-            }
-        }
-
-        .row {
-            width: 100%;
-            display: flex;
-
-            @media (max-width:1024px) {
-                flex-flow: column nowrap;
-            }
-
-            .row__img {
-                padding: 2px;
-                background-color: $mainColor;
-                border-radius: 5px;
-                box-shadow: $shadow;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    border-radius: 3px;
-                }
-            }
-
-            .text-box {
-                display: flex;
-                flex-flow: column nowrap;
-                margin-left: 30px;
-                padding: 5px;
-                border-radius: 5px;
-                background-color: #00000087;
-
-                @media (max-width:1024px) {
-                    margin-left: 0px;
-                    margin-top: 10px;
-                }
-
-                p {
-                    color: $mainWhite;
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 20px;
-                    line-height: 22px;
-                    margin: 5px;
-
-                    a {
-                        color: $mainWhite;
-                        transition: text-decoration 0.3s ease 0s;
-                        text-decoration: none;
-                    }
-
-                    a:hover {
-                        text-decoration: underline;
-                        color: $hoverColor;
-                    }
-                }
-            }
-        }
-    }
-
-    .location {
-        background-color: $mainColor;
-        padding: 30px;
-
-        .title-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .title {
-                color: $fontColor;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 64px;
-                line-height: 70px;
-                text-transform: uppercase;
-
-                @media (max-width: 560px) {
-                    font-size: 48px;
-                }
-
-                @media (max-width: 480px) {
-                    font-size: 34px;
-                }
-            }
-        }
-
-        .map {
-            padding: 30px 0px;
-        }
-    }
-
-    .halls {
-        .wrapper {
+        .about {
             display: flex;
             flex-flow: column nowrap;
-            overflow: hidden;
-            margin: 0px 20px;
+            padding: 30px;
 
-            .title-box {
+            .row {
+                width: 100%;
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: 20px 0px;
+                margin-top: 30px;
 
-                .title {
-                    color: $fontColor;
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 64px;
-                    line-height: 70px;
-                    text-transform: uppercase;
+                @media (max-width:1024px) {
+                    flex-flow: column nowrap;
+                }
 
-                    @media (max-width: 560px) {
-                        font-size: 48px;
+                .row__img {
+                    padding: 2px;
+                    background-color: $mainColor;
+                    border-radius: 5px;
+                    box-shadow: $shadow;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 3px;
+                    }
+                }
+
+                .text-box {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    margin-left: 30px;
+                    padding: 5px;
+                    border-radius: 5px;
+                    background-color: #00000087;
+
+                    @media (max-width:1024px) {
+                        margin-left: 0px;
+                        margin-top: 10px;
                     }
 
-                    @media (max-width: 480px) {
-                        font-size: 34px;
+                    p {
+                        color: $fontColor;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 22px;
+                        margin: 5px;
+
+                        a {
+                            color: $fontColor;
+                            transition: text-decoration 0.3s ease 0s;
+                            text-decoration: none;
+                        }
+
+                        a:hover {
+                            text-decoration: underline;
+                            color: $hoverColor;
+                        }
                     }
                 }
             }
+        }
+    }
 
-            .swiper {
-                width: 100%;
-                box-shadow: $shadow;
-                margin-bottom: 30px;
-                border-radius: 8px;
-                background-color: $mainColor;
+    .location-section {
+        background-color: $mainColor;
 
-                .swiper-wrapper {
+        .location {
+            padding: 30px;
 
-                    .swiper-slide {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
+            .map {
+                padding: 30px 0px;
+            }
+        }
+    }
 
+    .halls-section {
+        background: url('../img/background.jpg') 0 0;
+        background-size: cover;
 
-                        .slide-container {
-                            padding: 20px;
+        .halls {
+            padding: 30px;
 
-                            .title-box {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
+            .wrapper {
+                display: flex;
+                flex-flow: column nowrap;
+                overflow: hidden;
+                margin: 0px 20px;
 
-                                .title {
-                                    color: $fontColor;
-                                    font-style: normal;
-                                    font-weight: 400;
-                                    font-size: 40px;
-                                    line-height: 70px;
-                                    text-transform: uppercase;
+                .swiper {
+                    width: 100%;
+                    box-shadow: $shadow;
+                    margin-bottom: 30px;
+                    border-radius: 8px;
+                    background-color: $mainColor;
 
-                                    @media (max-width: 620px) {
-                                        font-size: 30px;
-                                    }
+                    .swiper-wrapper {
 
-                                    @media (max-width: 485px) {
-                                        font-size: 25px;
-                                    }
-                                }
-                            }
+                        .swiper-slide {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
 
-                            .content-box {
-                                display: flex;
-                                align-items: center;
-                                flex-flow: row nowrap;
-                                height: 100%;
-                                width: 100%;
+                            .slide-container {
+                                padding: 20px;
 
-                                .img-container {
-                                    flex: 1 1 40%;
-
-                                    img {
-                                        border-radius: 5px;
-                                        max-width: 100%;
-                                        max-height: 100%;
-                                        object-fit: contain;
-                                        object-position: center;
-                                    }
-                                }
-
-                                .text-box {
-                                    flex: 1 1 60%;
-                                    margin-left: 30px;
+                                .title-box {
                                     display: flex;
+                                    justify-content: center;
                                     align-items: center;
-                                    flex-flow: column nowrap;
 
-                                    .text {
-                                        p {
-                                            color: $mainWhite;
-                                            font-style: normal;
-                                            font-weight: 400;
-                                            font-size: 20px;
-                                            line-height: 22px;
-                                            margin: 5px;
+                                    .title {
+                                        font-size: 40px;
+
+                                        @media (max-width: 620px) {
+                                            font-size: 30px;
                                         }
 
-                                        @media (max-width:870px) {
-                                            p:nth-child(2n + 1) {
-                                                display: none
+                                        @media (max-width: 485px) {
+                                            font-size: 25px;
+                                        }
+                                    }
+                                }
+
+                                .content-box {
+                                    display: flex;
+                                    align-items: center;
+                                    flex-flow: row nowrap;
+                                    height: 100%;
+                                    width: 100%;
+
+                                    .img-container {
+                                        flex: 1 1 40%;
+
+                                        img {
+                                            border-radius: 3px;
+                                            max-width: 100%;
+                                            max-height: 100%;
+                                            object-fit: contain;
+                                            object-position: center;
+                                        }
+                                    }
+
+                                    .text-box {
+                                        flex: 1 1 60%;
+                                        margin-left: 30px;
+                                        display: flex;
+                                        align-items: center;
+                                        flex-flow: column nowrap;
+
+                                        .text {
+                                            p {
+                                                color: $fontColor;
+                                                font-style: normal;
+                                                font-weight: 400;
+                                                font-size: 20px;
+                                                line-height: 22px;
+                                                margin: 5px;
+                                            }
+
+                                            @media (max-width:870px) {
+                                                p:nth-child(2n + 1) {
+                                                    display: none
+                                                }
                                             }
                                         }
                                     }
-                                }
 
-                                @media (max-width: 680px) {
-                                    flex-flow: column nowrap;
+                                    @media (max-width: 680px) {
+                                        flex-flow: column nowrap;
 
-                                    .text-box {
-                                        margin: 0px;
+                                        .text-box {
+                                            margin: 0px;
+                                        }
                                     }
                                 }
                             }
                         }
                     }
-                }
 
-                .swiper-scrollbar {
-                    background-color: $hoverColor;
-                    cursor: pointer;
+                    .swiper-scrollbar {
+                        background-color: $hoverColor;
+                        cursor: pointer;
+                    }
                 }
             }
         }

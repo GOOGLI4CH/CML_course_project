@@ -1,25 +1,25 @@
 @import 'common.scss';
 
 body {
-    background: url('../img/background.jpg') 0 0;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: $mainColor;
     font-family: $fontFamily;
 }
 
 @import 'header.scss';
 
 main {
+    margin-top: 60px;
+    background: url('../img/background.jpg');
+    background-size: cover;
 
     .poster_kino {
-        margin-top: 85px;
+        padding-top: 40px;
 
         .title-box {
                 display: flex;
                 justify-content: center;
-                margin-bottom: 15px;
+
                 .title {
-                    font-family: $fontFamily;
                     font-weight: 400;
                     font-size: 48px;
                     color: $fontColor;
@@ -51,7 +51,7 @@ main {
         grid-gap: 63px;
         justify-items: center;
         margin: 0 auto;
-        padding-bottom: 20px;
+        padding: 40px 0px;
 
         .film {
             border-radius: 7px;
@@ -139,7 +139,7 @@ main {
                     font-weight: 400;
                     font-size: 26px;
                     line-height: 22px;
-                    color: $mainWhite;
+                    color: $fontColor;
                     color: #000;
                     text-decoration: none;
 

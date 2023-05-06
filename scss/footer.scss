@@ -2,7 +2,7 @@
 
 .footer {
     background-color: $mainColor;
-    padding: 40px;
+    padding: 30px;
 
     .wrapper {
         display: grid;
@@ -14,7 +14,7 @@
 
         .text-box__text {
             font-family: $fontFamily;
-            color: $mainWhite;
+            color: $fontColor;
             font-size: 20px;
             line-height: 22px;
         }
@@ -34,7 +34,7 @@
             line-height: 22px;
             text-decoration: none;
             font-family: $fontFamily;
-            color: $mainWhite;
+            color: $fontColor;
             justify-self: start;
             transition: all 0.3s ease 0s;
         }

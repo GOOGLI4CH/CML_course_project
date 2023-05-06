@@ -1,11 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
 body {
-  background: url("../img/background.jpg") 0 0;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #202733;
   font-family: "Raleway", sans-serif;
 }
 
@@ -264,6 +258,8 @@ body.lock {
 }
 main {
   margin-top: 50px;
+  background: url("../img/background.jpg");
+  background-size: cover;
 }
 main .wrapper {
   display: -webkit-box;
@@ -319,7 +315,7 @@ main .wrapper .card p {
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
-  color: #ffffff;
+  color: #fff;
 }
 @media (max-width: 768px) {
   main .wrapper .card p {
@@ -335,7 +331,7 @@ main .wrapper .card:hover {
 
 .footer {
   background-color: #202733;
-  padding: 40px;
+  padding: 30px;
 }
 .footer .wrapper {
   display: -ms-grid;
@@ -349,7 +345,7 @@ main .wrapper .card:hover {
 }
 .footer .first-row .text-box__text {
   font-family: "Raleway", sans-serif;
-  color: #ffffff;
+  color: #fff;
   font-size: 20px;
   line-height: 22px;
 }
@@ -419,7 +415,7 @@ main .wrapper .card:hover {
   line-height: 22px;
   text-decoration: none;
   font-family: "Raleway", sans-serif;
-  color: #ffffff;
+  color: #fff;
   -ms-grid-column-align: start;
       justify-self: start;
   -webkit-transition: all 0.3s ease 0s;

@@ -1,12 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap&subset=cyrillic-ext");
 body {
-  background: url("../img/background.jpg") 0 0;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #202733;
   font-family: "Raleway", sans-serif;
 }
 
@@ -263,8 +256,13 @@ body.lock {
     font-size: 26px;
   }
 }
+main {
+  margin-top: 60px;
+  background: url("../img/background.jpg");
+  background-size: cover;
+}
 main .poster_kino {
-  margin-top: 85px;
+  padding-top: 40px;
 }
 main .poster_kino .title-box {
   display: -webkit-box;
@@ -273,10 +271,8 @@ main .poster_kino .title-box {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 15px;
 }
 main .poster_kino .title-box .title {
-  font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 48px;
   color: #fff;
@@ -305,7 +301,7 @@ main .films {
   grid-gap: 63px;
   justify-items: center;
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding: 40px 0px;
 }
 main .films .film {
   border-radius: 7px;
@@ -398,7 +394,7 @@ main .films .button-box__button a {
   font-weight: 400;
   font-size: 26px;
   line-height: 22px;
-  color: #ffffff;
+  color: #fff;
   color: #000;
   text-decoration: none;
 }
@@ -425,7 +421,7 @@ main .films .button-box__button:active {
 
 .footer {
   background-color: #202733;
-  padding: 40px;
+  padding: 30px;
 }
 .footer .wrapper {
   display: -ms-grid;
@@ -439,7 +435,7 @@ main .films .button-box__button:active {
 }
 .footer .first-row .text-box__text {
   font-family: "Raleway", sans-serif;
-  color: #ffffff;
+  color: #fff;
   font-size: 20px;
   line-height: 22px;
 }
@@ -509,7 +505,7 @@ main .films .button-box__button:active {
   line-height: 22px;
   text-decoration: none;
   font-family: "Raleway", sans-serif;
-  color: #ffffff;
+  color: #fff;
   -ms-grid-column-align: start;
       justify-self: start;
   -webkit-transition: all 0.3s ease 0s;
@@ -655,7 +651,7 @@ main .films .button-box__button:active {
   }
 }
 .popup__title a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   position: absolute;
   right: 0px;
@@ -697,7 +693,7 @@ main .films .button-box__button:active {
 }
 .popup__text .card .title-box .title {
   font-family: "Raleway", sans-serif;
-  color: #ffffff;
+  color: #fff;
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
@@ -730,7 +726,7 @@ main .films .button-box__button:active {
 .popup__text .card .content-box p {
   margin-left: 30px;
   font-family: "Raleway", sans-serif;
-  color: #ffffff;
+  color: #fff;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
