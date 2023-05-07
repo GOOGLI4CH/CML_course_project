@@ -30,9 +30,9 @@ body.mobile .header .header__menu .menu__body .menu__list li {
           align-items: center;
 }
 body.mobile .header .header__menu .menu__body .menu__list li .menu__link {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
 }
 body.mobile .header .header__menu .menu__body .menu__list .menu__arrow {
   display: block;
