@@ -336,8 +336,10 @@ main .films .film p {
   color: #fff;
 }
 main .films .film .img_film {
-  width: 249px;
-  height: 354px;
+  width: 250px;
+  height: 355px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 main .films .film .img_film .info {
   width: 100%;
@@ -346,8 +348,8 @@ main .films .film .img_film .info {
 main .films .img_film:hover .info {
   opacity: 1;
   background: rgba(0, 0, 0, 0.8);
-  width: 249px;
-  height: 354px;
+  width: 250px;
+  height: 355px;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 75% 10% 15%;
@@ -371,7 +373,6 @@ main .films .data {
   line-height: 18px;
 }
 main .films .button-box {
-  width: 100%;
   text-align: center;
   width: 249px;
 }

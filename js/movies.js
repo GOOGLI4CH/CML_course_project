@@ -49,7 +49,7 @@ let parse = (xmlString => {
 
     );
 
-    document.querySelectorAll('.img_film')[i].style.background = `url('${films_arr[i]}')`;
+    document.querySelectorAll('.img_film')[i].style.backgroundImage = `url('${films_arr[i]}')`;
   }
 
   ModalWindow();
